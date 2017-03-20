@@ -1,0 +1,1005 @@
+$VAR1 = {
+    'tiles'     => {
+        'builder_farm' => {
+            'era'       => 0,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_farm',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 1,
+                    'wood'      => 1,
+                },
+            ],
+            'title' => 'Builder - Farm',
+            'description' => 'Spend 1 Tool, and 1 Wood and build a Farm. (No Limit)',
+        },
+        'builder_library' => {
+            'era'       => 0,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_library',
+            'limit'     => 1,
+            'cost'      => [
+                {
+                    'tools'     => 1,
+                    'wood'      => 1,
+                    'planks'    => 1,
+                },
+            ],
+            'title' => 'Builder - Library',
+            'description' => 'Spend 1 Tool, 1 Wood, 1 Plank and build a Library. (Limit 1)',
+        },
+        'builder_hunting_lodge' => {
+            'era'       => 0,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_hunting_lodge',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'wood'      => 2,
+                    'clay'      => 1,
+                },
+            ],
+            'title' => 'Builder - Hunting Lodge',
+            'description' => 'Spend 3 Tools, 2 Wood, and 1 Clay and build a Hunting Lodge. (No Limit)',
+        },
+        'builder_foresters_house => {
+            'era'       => 0,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_foresters_house',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 2,
+                    'wood'      => 3,
+                },
+            ],
+            'title' => 'Builder - Forester\'s House',
+            'description' => 'Spend 2 Tools and 1 Wood and build a Forester\'s House. (Limit 3)',
+        },
+        'builder_storage_shed_2' => {
+            'era'       => 0,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_storage_shed_2',
+            'limit'     => 3,
+            'cost'      => [
+                {
+                    'tools'     => 1,
+                    'wood'      => 2,
+                },
+            ],
+            'title' => 'Builder - Storage Shed (2)',
+            'description' => 'Spend 2 Tools and 3 Wood and build a Storage Shed (2). (Limit 3)',
+        },
+        'riverbank_grove' => {
+            'era'       => 0,
+            'count'     => 2,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'wood'  => 2,
+                }
+            ],
+            'title' => 'Riverbank Grove',
+            'description' => 'Gain 2 Wood.',
+        },
+        'joiner' => {
+            'era' => 0,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Joiner',
+            'description' => 'Convert 2 Wood to 1 Plank (no limit).',
+        },
+        'developer' => {
+            'era' => 0,
+            'count' => 1,
+            'type' => 'developer',
+            'title' => 'Developer',
+            'description' => 'Gain 2 Tools and play a Development Card.',
+        },
+        'librarian' => {
+            'era' => 0,
+            'count' => 1,
+            'type' => 'librarian',
+            'title' => 'Librarian',
+            'description' => 'Gain 1 Gold and draw 2 Development Cards.',
+        },
+        'diplomat' => {
+            'era'   => 0,
+            'count' => 1,
+            'type' => 'diplomat',
+            'title' => 'Diplomat',
+            'description' => 'Build an embassy level.',
+        },
+        'head_official' => {
+            'era'   => 0,
+            'count' => 1,
+            'type' => 'head_official',
+            'title' => 'Head Official',
+            'description' => 'Gain 1 Clay and the First Player marker.',
+        },
+        'grove' => {
+            'era'       => 1,
+            'count'     => 2,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'wood'  => 2,
+                }
+            ],
+            'title' => 'Grove',
+            'description' => 'Gain 2 Wood.',
+        },
+        'clay_delve' => {
+            'era'       => 1,
+            'count'     => 2,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'clay'  => 2,
+                }
+            ],
+            'title' => 'Clay Delve',
+            'description' => 'Gain 2 Clay.',
+        },
+        'clayburner' => {
+            'era' => 1,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                            'clay' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'bricks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Clayburner',
+            'description' => 'Convert 1 Wood and 2 Clay to 1 Brick (no limit).',
+        },
+        'joiner' => {
+            'era' => 1,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Joiner',
+            'description' => 'Convert 2 Wood to 1 Plank (no limit).',
+        },
+        'builder_hollow' => {
+            'era'       => 1,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_hollow',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 2,
+                    'clay'      => 3,
+                },
+            ],
+            'title' => 'Builder - Hollow',
+            'description' => 'Spend 2 Tools, and 3 Clay and build a Hollow. (No Limit)',
+        },
+        'builder_factory' => {
+            'era'       => 1,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_factory',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'clay'      => 3,
+                    'wood'      => 3,
+                },
+            ],
+            'title' => 'Builder - Factory',
+            'description' => 'Spend 3 Tools, 3 Wood, and 3 Clay and build a Factory. (No Limit)',
+        },
+        'builder_pub' => {
+            'era'       => 1,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_pub',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 1,
+                    'clay'      => 1,
+                    'bricks'    => 1,
+                    'planks'    => 1,
+                },
+            ],
+            'title' => 'Builder - Pub',
+            'description' => 'Spend 1 Tool, 1 Clay, 1 Brick, and 1 Plank and build a Pub. (No Limit)',
+        },
+        'builder_estate' => {
+            'era'       => 1,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_estate',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 1,
+                    'wood'      => 3,
+                    'bricks'    => 1,
+                },
+            ],
+            'upgrades'  => 'building_farm',
+            'title' => 'Builder - Estate',
+            'description' => 'Spend 1 Tool, 3 Wood, and 1 Brick and upgrade a Farm to an Estate. (No Limit)',
+        },
+        'builder_flat' => {
+            'era'       => 1,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_flat',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 1,
+                    'planks'    => 1,
+                },
+            ],
+            'upgrades'  => 'building_farm',
+            'title' => 'Builder - Flat',
+            'description' => 'Spend 1 Tool, and 1 Plank and upgrade a Farm to a Flat. (No Limit)',
+        },
+        'baker' => {
+            'era' => 1,
+            'count' => 1,
+            'type' => 'sustenance',
+            'title' => 'Baker',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'food' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'gold' => 1,
+                        },
+                    },
+                },
+            ],
+            'gain' => {
+                'food' => 2,
+            }
+            'description' => 'Gain 2 Food or sell 2 Food for 1 Gold each (No Limit).',
+        },
+        'ore_pit' => {
+            'era'       => 2,
+            'count'     => 1,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'ore'  => 1,
+                }
+            ],
+            'title' => 'Ore Pit',
+            'description' => 'Gain 1 Ore.',
+        },
+        'clay_pocket' => {
+            'era'       => 2,
+            'count'     => 1,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'clay'  => 2,
+                }
+            ],
+            'title' => 'Clay Pocket',
+            'description' => 'Gain 2 Clay.',
+        },
+        'riverbank_forest' => {
+            'era'       => 2,
+            'count'     => 1,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'wood'  => 3,
+                }
+            ],
+            'upgrades' => 'riverbank_grove',
+            'title' => 'Riverbank Forest',
+            'description' => 'Gain 3 Wood.',
+        },
+        'grand_baker' => {
+            'era' => 2,
+            'count' => 1,
+            'type' => 'sustenance',
+            'title' => 'Grand Baker',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'food' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'gold' => 1,
+                        },
+                    },
+                },
+            ],
+            'gain' => {
+                'food' => 3,
+            }
+            'description' => 'Gain 3 Food or sell 2 Food for 1 Gold each (No Limit).',
+        },
+        'joiner' => {
+            'era' => 2,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Joiner',
+            'description' => 'Convert 2 Wood to 1 Plank (no limit).',
+        },
+        'loamburner' => {
+            'era' => 2,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                            'clay' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'bricks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Loamburner',
+            'description' => 'Convert 1 Wood, and 1 Clay to 1 Brick (no limit).',
+        },
+        'blacksmith' => {
+            'era' => 2,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                            'ore' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'tools' => 2,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Blacksmith',
+            'description' => 'Convert 1 Wood, and 1 Ore to 2 Tools (no limit).',
+        },
+        'builder_institute' => {
+            'era'       => 2,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_institute',
+            'limit'     => 1,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'planks'    => 2,
+                    'bricks'    => 2,
+                },
+            ],
+            'title' => 'Builder - Institute',
+            'description' => 'Spend 3 Tools, 2 Planks, and 2 Bricks and build an Institute. (Limit 1)',
+        },
+        'builder_storage_house_5' => {
+            'era'       => 2,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_storage_house_5',
+            'limit'     => 3,
+            'cost'      => [
+                {
+                    'tools'     => 2,
+                    'planks'    => 1,
+                    'bricks'    => 1,
+                },
+            ],
+            'upgrades'  => 'building_storage_shed_2',
+            'title' => 'Builder - Storage House (5)',
+            'description' => 'Spend 2 Tools, 1 Plank, and 1 Brick and upgrade a Storage Shed (2) to a Storage House (5). (Limit 3)',
+        },
+        'builder_theater' => {
+            'era'       => 2,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_theater',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 2,
+                    'planks'    => 2,
+                    'clay'      => 2,
+                    'bricks'    => 2,
+                },
+            ],
+            'title' => 'Builder - Theater',
+            'description' => 'Spend 2 Tools, 2 Clay, 2 Planks, and 2 Bricks and build a Theater. (No Limit)',
+        },
+        'builder_iron_mine' => {
+            'era'       => 1,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_iron_mine',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 2,
+                    'planks'    => 2,
+                    'bricks'    => 3,
+                },
+            ],
+            'title' => 'Builder - Iron Mine',
+            'description' => 'Spend 2 Tools, 2 Planks, and 3 Bricks and build an Iron Mine. (No Limit)',
+        },
+        'builder_apartment' => {
+            'era'       => 2,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_apartment',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 1,
+                    'planks'    => 2,
+                    'clay'      => 2,
+                },
+            ],
+            'upgrades'  => 'building_flat',
+            'title' => 'Builder - Apartment',
+            'description' => 'Spend 1 Tool, 2 Planks, and 2 Clay and upgrade a Flat to an Apartment. (No Limit)',
+        },
+        'weaver' => {
+            'era' => 3,
+            'count' => 1,
+            'type' => 'sustenance',
+            'title' => 'Weaver',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'cloth' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'gold' => 1,
+                        },
+                    },
+                },
+            ],
+            'gain' => {
+                'cloth' => 2,
+            }
+            'description' => 'Gain 2 Cloth or sell 2 Cloth for 1 Gold each (No Limit).',
+        },
+        'riverbank_forest' => {
+            'era'       => 3,
+            'count'     => 1,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'wood'  => 3,
+                }
+            ],
+            'upgrades' => 'riverbank_grove',
+            'title' => 'Riverbank Forest',
+            'description' => 'Gain 3 Wood.',
+        },
+        'clay_pit' => {
+            'era'       => 3,
+            'count'     => 1,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'clay'  => 3,
+                }
+            ],
+            'title' => 'Clay Pit',
+            'description' => 'Gain 3 Clay.',
+        },
+        'coalburner' => {
+            'era' => 3,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 3,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'coal' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Coalburner',
+            'description' => 'Convert 3 Wood to 1 Coal (no limit).',
+        },
+        'iron_smelter' => {
+            'era' => 3,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'ore' => 2,
+                            'wood' => 6,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'iron' => 1,
+                        },
+                    },
+                },
+                {
+                    'from' => {
+                        {
+                            'ore' => 2,
+                            'coal' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'iron' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Iron Smelter',
+            'description' => 'Convert either 2 Ore and 6 Wood or 2 Ore and 1 Coal to 1 Iron (no limit).',
+        },
+        'builder_house' => {
+            'era'       => 3,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_house',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 2,
+                    'planks'    => 1,
+                    'bricks'    => 1,
+                    'clay'      => 2,
+                },
+            ],
+            'upgrades'  => 'building_flat',
+            'title' => 'Builder - House',
+            'description' => 'Spend 2 Tools, 1 Plank, 1 Brick, and 2 Clay and upgrade a Flat to a House. (No Limit)',
+        },
+        'builder_hunting_grounds' => {
+            'era'       => 3,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_hunting_grounds',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'wood'      => 4,
+                    'clay'      => 2,
+                },
+            ],
+            'upgrades'  => 'building_hunting_lodge',
+            'title' => 'Builder - Hunting Grounds',
+            'description' => 'Spend 3 Tools, 4 Wood, and 2 Clay and upgrade a Hunting Lodge to a Hunting Grounds. (No Limit)',
+        },
+        'builder_community_hall' => {
+            'era'       => 3,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_community_hall',
+            'limit'     => 1,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'planks'    => 3,
+                    'bricks'    => 3,
+                    'iron'      => 3,
+                },
+            ],
+            'upgrades'  => 'building_house',
+            'title' => 'Builder - Community Hall',
+            'description' => 'Spend 3 Tools, 3 Planks, 3 Bricks, and 3 Iron and upgrade a House to a Community Hall. (Limit 1)',
+        },
+        'builder_boardinghouse' => {
+            'era'       => 3,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_boardinghouse',
+            'limit'     => 2,
+            'cost'      => [
+                {
+                    'tools'     => 2,
+                    'planks'    => 1,
+                    'bricks'    => 1,
+                    'iron'      => 1,
+                },
+            ],
+            'title' => 'Builder - Boardinghouse',
+            'description' => 'Spend 2 Tools, 1 Plank, 1 Brick, and 1 Iron to build a Boardinghouse. (Limit 2)',
+        },
+        'builder_stables' => {
+            'era'       => 3,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_stables',
+            'limit'     => 1,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'planks'    => 2,
+                    'bricks'    => 2,
+                    'iron'      => 2,
+                },
+            ],
+            'title' => 'Builder - Stables',
+            'description' => 'Spend 3 Tools, 2 Planks, 2 Bricks, and 2 Iron to build a Stable. (Limit 1)',
+        },
+        'builder_customs_house' => {
+            'era'       => 3,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_customs_house',
+            'limit'     => 1,
+            'cost'      => [
+                {
+                    'tools'     => 2,
+                    'planks'    => 2,
+                    'bricks'    => 2,
+                    'ore'       => 1,
+                },
+            ],
+            'title' => 'Builder - Customs House',
+            'description' => 'Spend 2 Tools, 2 Planks, 2 Bricks, and 1 Ore to build a Customs House. (Limit 1)',
+        },
+        'builder_tailor_shop' => {
+            'era'       => 3,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_tailor_shop',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'bricks'    => 2,
+                    'clay'      => 2,
+                },
+            ],
+            'title' => 'Builder - Tailor Shop',
+            'description' => 'Spend 3 Tools, 2 Bricks, and 2 Clay to build a Tailor Shop. (No Limit)',
+        },
+        'forest' => {
+            'era'       => 4,
+            'count'     => 1,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'wood'  => 4,
+                }
+            ],
+            'upgrades' => 'grove',
+            'title' => 'Forest',
+            'description' => 'Gain 4 Wood.',
+        },
+        'clay_pit' => {
+            'era'       => 4,
+            'count'     => 1,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'clay'  => 3,
+                }
+            ],
+            'upgrades' => 'clay_delve',
+            'title' => 'Clay Pit',
+            'description' => 'Gain 3 Clay.',
+        },
+        'ore_pit' => {
+            'era'       => 4,
+            'count'     => 1,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'ore'  => 1,
+                }
+            ],
+            'title' => 'Ore Pit',
+            'description' => 'Gain 1 Ore.',
+        },
+        'ore_mine' => {
+            'era'       => 4,
+            'count'     => 1,
+            'type'      => 'gather',
+            'resource'  => [
+                {
+                    'ore'  => 2,
+                }
+            ],
+            'title' => 'Ore Mine',
+            'description' => 'Gain 2 Ore.',
+        },
+        'tailor' => {
+            'era' => 4,
+            'count' => 1,
+            'type' => 'sustenance',
+            'title' => 'Tailor',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'cloth' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'gold' => 1,
+                        },
+                    },
+                },
+            ],
+            'gain' => {
+                'cloth' => 3,
+            }
+            'description' => 'Gain 3 Cloth or sell 2 Cloth for 1 Gold each (No Limit).',
+        },
+        'carpenter' => {
+            'era' => 4,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'upgrades' => 'joiner',
+            'title' => 'Carpenter',
+            'description' => 'Convert 1 Wood to 1 Plank (no limit).',
+        },
+        'brickburner' => {
+            'era' => 4,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                            'clay' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'bricks' => 2,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'upgrades' => 'clayburner',
+            'title' => 'Brickburner',
+            'description' => 'Convert 1 Wood, and 1 Clay to 2 Bricks (no limit).',
+        },
+        'charburner' => {
+            'era' => 4,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 5,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'coal' => 2,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Charburner',
+            'description' => 'Convert 5 Wood to 2 Coal (no limit).',
+        },
+        'ironsmith' => {
+            'era' => 4,
+            'count' => 1,
+            'type' => 'refiner',
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'iron' => 1,
+                            'wood' => 6,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'tools' => 6,
+                        },
+                    },
+                },
+                {
+                    'from' => {
+                        {
+                            'iron' => 1,
+                            'coal' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'tools' => 6,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'upgrades' => 'blacksmith'
+            'title' => 'Ironsmith',
+            'description' => 'Convert either 1 Iron and 6 Wood or 1 Iron and 1 Coal to 6 Tools (no limit).',
+        },
+        'builder_textile_mill' => {
+            'era'       => 4,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_textile_mill',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'wood'      => 3,
+                    'iron'      => 1,
+                    'planks'    => 3,
+                },
+            ],
+            'upgrades'  => 'building_tailor_shop',
+            'title' => 'Builder - Textile Mill',
+            'description' => 'Spend 3 Tools, 3 Wood, 3 Planks, and 1 Iron and upgrade a Tailor Shop to a Textile Mill. (No Limit)',
+        },
+        'builder_storage_hall_9' => {
+            'era'       => 4,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_storage_hall_9',
+            'limit'     => 3,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'iron'      => 1,
+                    'bricks'    => 3,
+                },
+            ],
+            'upgrades'  => 'building_storage_house_5',
+            'title' => 'Builder - Storage Hall (9)',
+            'description' => 'Spend 3 Tools, 1 Iron, and 3 Bricks and upgrade a Storage House (5) to a Storage Hall (9). (Limit 3)',
+        },
+        'builder_casino' => {
+            'era'       => 4,
+            'count'     => 1,
+            'type'      => 'builder',
+            'builds'    => 'building_casino',
+            'limit'     => -1,
+            'cost'      => [
+                {
+                    'tools'     => 3,
+                    'clay'      => 3,
+                    'iron'      => 2,
+                    'bricks'    => 2,
+                },
+            ],
+            'title' => 'Builder - Casino',
+            'description' => 'Spend 3 Tools, 3 Clay, 2 Iron, and 2 Bricks to build a Casino. (No Limit)',
+        },
+        'chief_officer' => {
+            'era' => 4,
+            'count' => 1,
+            'type' => 'chief_officer',
+            'upgrades' => 'head_official'
+            'title' => 'Chief Officer',
+            'description' => 'Gain 1 Gold, and 1 Tool, the First Player Marker and swap two tiles.',
+        },
+
+
+
+
+
+
+    },
+
+
+
+};

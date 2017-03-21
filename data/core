@@ -1,6 +1,6 @@
 $VAR1 = {
     'tiles'     => {
-        'builder_farm' => {
+        'tile_builder_farm' => {
             'era'       => 0,
             'count'     => 1,
             'type'      => 'builder',
@@ -15,7 +15,7 @@ $VAR1 = {
             'title' => 'Builder - Farm',
             'description' => 'Spend 1 Tool, and 1 Wood and build a Farm. (No Limit)',
         },
-        'builder_library' => {
+        'tile_builder_library' => {
             'era'       => 0,
             'count'     => 1,
             'type'      => 'builder',
@@ -31,7 +31,7 @@ $VAR1 = {
             'title' => 'Builder - Library',
             'description' => 'Spend 1 Tool, 1 Wood, 1 Plank and build a Library. (Limit 1)',
         },
-        'builder_hunting_lodge' => {
+        'tile_builder_hunting_lodge' => {
             'era'       => 0,
             'count'     => 1,
             'type'      => 'builder',
@@ -47,7 +47,7 @@ $VAR1 = {
             'title' => 'Builder - Hunting Lodge',
             'description' => 'Spend 3 Tools, 2 Wood, and 1 Clay and build a Hunting Lodge. (No Limit)',
         },
-        'builder_foresters_house => {
+        'tile_builder_foresters_house => {
             'era'       => 0,
             'count'     => 1,
             'type'      => 'builder',
@@ -62,7 +62,7 @@ $VAR1 = {
             'title' => 'Builder - Forester\'s House',
             'description' => 'Spend 2 Tools and 1 Wood and build a Forester\'s House. (Limit 3)',
         },
-        'builder_storage_shed_2' => {
+        'tile_builder_storage_shed_2' => {
             'era'       => 0,
             'count'     => 1,
             'type'      => 'builder',
@@ -77,7 +77,7 @@ $VAR1 = {
             'title' => 'Builder - Storage Shed (2)',
             'description' => 'Spend 2 Tools and 3 Wood and build a Storage Shed (2). (Limit 3)',
         },
-        'riverbank_grove' => {
+        'tile_riverbank_grove' => {
             'era'       => 0,
             'count'     => 2,
             'type'      => 'gather',
@@ -111,35 +111,35 @@ $VAR1 = {
             'title' => 'Joiner',
             'description' => 'Convert 2 Wood to 1 Plank (no limit).',
         },
-        'developer' => {
+        'tile_developer' => {
             'era' => 0,
             'count' => 1,
             'type' => 'developer',
             'title' => 'Developer',
             'description' => 'Gain 2 Tools and play a Development Card.',
         },
-        'librarian' => {
+        'tile_librarian' => {
             'era' => 0,
             'count' => 1,
             'type' => 'librarian',
             'title' => 'Librarian',
             'description' => 'Gain 1 Gold and draw 2 Development Cards.',
         },
-        'diplomat' => {
+        'tile_diplomat' => {
             'era'   => 0,
             'count' => 1,
             'type' => 'diplomat',
             'title' => 'Diplomat',
             'description' => 'Build an embassy level.',
         },
-        'head_official' => {
+        'tile_head_official' => {
             'era'   => 0,
             'count' => 1,
             'type' => 'head_official',
             'title' => 'Head Official',
             'description' => 'Gain 1 Clay and the First Player marker.',
         },
-        'grove' => {
+        'tile_grove' => {
             'era'       => 1,
             'count'     => 2,
             'type'      => 'gather',
@@ -151,7 +151,7 @@ $VAR1 = {
             'title' => 'Grove',
             'description' => 'Gain 2 Wood.',
         },
-        'clay_delve' => {
+        'tile_clay_delve' => {
             'era'       => 1,
             'count'     => 2,
             'type'      => 'gather',
@@ -163,7 +163,7 @@ $VAR1 = {
             'title' => 'Clay Delve',
             'description' => 'Gain 2 Clay.',
         },
-        'clayburner' => {
+        'tile_clayburner' => {
             'era' => 1,
             'count' => 1,
             'type' => 'refiner',
@@ -186,7 +186,7 @@ $VAR1 = {
             'title' => 'Clayburner',
             'description' => 'Convert 1 Wood and 2 Clay to 1 Brick (no limit).',
         },
-        'joiner' => {
+        'tile_joiner' => {
             'era' => 1,
             'count' => 1,
             'type' => 'refiner',
@@ -208,7 +208,7 @@ $VAR1 = {
             'title' => 'Joiner',
             'description' => 'Convert 2 Wood to 1 Plank (no limit).',
         },
-        'builder_hollow' => {
+        'tile_builder_hollow' => {
             'era'       => 1,
             'count'     => 1,
             'type'      => 'builder',
@@ -223,7 +223,7 @@ $VAR1 = {
             'title' => 'Builder - Hollow',
             'description' => 'Spend 2 Tools, and 3 Clay and build a Hollow. (No Limit)',
         },
-        'builder_factory' => {
+        'tile_builder_factory' => {
             'era'       => 1,
             'count'     => 1,
             'type'      => 'builder',
@@ -239,7 +239,7 @@ $VAR1 = {
             'title' => 'Builder - Factory',
             'description' => 'Spend 3 Tools, 3 Wood, and 3 Clay and build a Factory. (No Limit)',
         },
-        'builder_pub' => {
+        'tile_builder_pub' => {
             'era'       => 1,
             'count'     => 1,
             'type'      => 'builder',
@@ -256,7 +256,7 @@ $VAR1 = {
             'title' => 'Builder - Pub',
             'description' => 'Spend 1 Tool, 1 Clay, 1 Brick, and 1 Plank and build a Pub. (No Limit)',
         },
-        'builder_estate' => {
+        'tile_builder_estate' => {
             'era'       => 1,
             'count'     => 1,
             'type'      => 'builder',
@@ -269,11 +269,11 @@ $VAR1 = {
                     'bricks'    => 1,
                 },
             ],
-            'upgrades'  => 'building_farm',
+            'upgrade_building'  => 'building_farm',
             'title' => 'Builder - Estate',
             'description' => 'Spend 1 Tool, 3 Wood, and 1 Brick and upgrade a Farm to an Estate. (No Limit)',
         },
-        'builder_flat' => {
+        'tile_builder_flat' => {
             'era'       => 1,
             'count'     => 1,
             'type'      => 'builder',
@@ -285,11 +285,11 @@ $VAR1 = {
                     'planks'    => 1,
                 },
             ],
-            'upgrades'  => 'building_farm',
+            'upgrade_building'  => 'building_farm',
             'title' => 'Builder - Flat',
             'description' => 'Spend 1 Tool, and 1 Plank and upgrade a Farm to a Flat. (No Limit)',
         },
-        'baker' => {
+        'tile_baker' => {
             'era' => 1,
             'count' => 1,
             'type' => 'sustenance',
@@ -313,7 +313,7 @@ $VAR1 = {
             }
             'description' => 'Gain 2 Food or sell 2 Food for 1 Gold each (No Limit).',
         },
-        'ore_pit' => {
+        'tile_ore_pit' => {
             'era'       => 2,
             'count'     => 1,
             'type'      => 'gather',
@@ -325,7 +325,7 @@ $VAR1 = {
             'title' => 'Ore Pit',
             'description' => 'Gain 1 Ore.',
         },
-        'clay_pocket' => {
+        'tile_clay_pocket' => {
             'era'       => 2,
             'count'     => 1,
             'type'      => 'gather',
@@ -337,7 +337,7 @@ $VAR1 = {
             'title' => 'Clay Pocket',
             'description' => 'Gain 2 Clay.',
         },
-        'riverbank_forest' => {
+        'tile_riverbank_forest' => {
             'era'       => 2,
             'count'     => 1,
             'type'      => 'gather',
@@ -350,7 +350,7 @@ $VAR1 = {
             'title' => 'Riverbank Forest',
             'description' => 'Gain 3 Wood.',
         },
-        'grand_baker' => {
+        'tile_grand_baker' => {
             'era' => 2,
             'count' => 1,
             'type' => 'sustenance',
@@ -374,7 +374,7 @@ $VAR1 = {
             }
             'description' => 'Gain 3 Food or sell 2 Food for 1 Gold each (No Limit).',
         },
-        'joiner' => {
+        'tile_joiner' => {
             'era' => 2,
             'count' => 1,
             'type' => 'refiner',
@@ -396,7 +396,7 @@ $VAR1 = {
             'title' => 'Joiner',
             'description' => 'Convert 2 Wood to 1 Plank (no limit).',
         },
-        'loamburner' => {
+        'tile_loamburner' => {
             'era' => 2,
             'count' => 1,
             'type' => 'refiner',
@@ -419,7 +419,7 @@ $VAR1 = {
             'title' => 'Loamburner',
             'description' => 'Convert 1 Wood, and 1 Clay to 1 Brick (no limit).',
         },
-        'blacksmith' => {
+        'tile_blacksmith' => {
             'era' => 2,
             'count' => 1,
             'type' => 'refiner',
@@ -442,7 +442,7 @@ $VAR1 = {
             'title' => 'Blacksmith',
             'description' => 'Convert 1 Wood, and 1 Ore to 2 Tools (no limit).',
         },
-        'builder_institute' => {
+        'tile_builder_institute' => {
             'era'       => 2,
             'count'     => 1,
             'type'      => 'builder',
@@ -458,7 +458,7 @@ $VAR1 = {
             'title' => 'Builder - Institute',
             'description' => 'Spend 3 Tools, 2 Planks, and 2 Bricks and build an Institute. (Limit 1)',
         },
-        'builder_storage_house_5' => {
+        'tile_builder_storage_house_5' => {
             'era'       => 2,
             'count'     => 1,
             'type'      => 'builder',
@@ -471,11 +471,11 @@ $VAR1 = {
                     'bricks'    => 1,
                 },
             ],
-            'upgrades'  => 'building_storage_shed_2',
+            'upgrade_building'  => 'building_storage_shed_2',
             'title' => 'Builder - Storage House (5)',
             'description' => 'Spend 2 Tools, 1 Plank, and 1 Brick and upgrade a Storage Shed (2) to a Storage House (5). (Limit 3)',
         },
-        'builder_theater' => {
+        'tile_builder_theater' => {
             'era'       => 2,
             'count'     => 1,
             'type'      => 'builder',
@@ -492,7 +492,7 @@ $VAR1 = {
             'title' => 'Builder - Theater',
             'description' => 'Spend 2 Tools, 2 Clay, 2 Planks, and 2 Bricks and build a Theater. (No Limit)',
         },
-        'builder_iron_mine' => {
+        'tile_builder_iron_mine' => {
             'era'       => 1,
             'count'     => 1,
             'type'      => 'builder',
@@ -508,7 +508,7 @@ $VAR1 = {
             'title' => 'Builder - Iron Mine',
             'description' => 'Spend 2 Tools, 2 Planks, and 3 Bricks and build an Iron Mine. (No Limit)',
         },
-        'builder_apartment' => {
+        'tile_builder_apartment' => {
             'era'       => 2,
             'count'     => 1,
             'type'      => 'builder',
@@ -521,11 +521,11 @@ $VAR1 = {
                     'clay'      => 2,
                 },
             ],
-            'upgrades'  => 'building_flat',
+            'upgrade_building'  => 'building_flat',
             'title' => 'Builder - Apartment',
             'description' => 'Spend 1 Tool, 2 Planks, and 2 Clay and upgrade a Flat to an Apartment. (No Limit)',
         },
-        'weaver' => {
+        'tile_weaver' => {
             'era' => 3,
             'count' => 1,
             'type' => 'sustenance',
@@ -549,7 +549,7 @@ $VAR1 = {
             }
             'description' => 'Gain 2 Cloth or sell 2 Cloth for 1 Gold each (No Limit).',
         },
-        'riverbank_forest' => {
+        'tile_riverbank_forest' => {
             'era'       => 3,
             'count'     => 1,
             'type'      => 'gather',
@@ -562,7 +562,7 @@ $VAR1 = {
             'title' => 'Riverbank Forest',
             'description' => 'Gain 3 Wood.',
         },
-        'clay_pit' => {
+        'tile_clay_pit' => {
             'era'       => 3,
             'count'     => 1,
             'type'      => 'gather',
@@ -574,7 +574,7 @@ $VAR1 = {
             'title' => 'Clay Pit',
             'description' => 'Gain 3 Clay.',
         },
-        'coalburner' => {
+        'tile_coalburner' => {
             'era' => 3,
             'count' => 1,
             'type' => 'refiner',
@@ -596,7 +596,7 @@ $VAR1 = {
             'title' => 'Coalburner',
             'description' => 'Convert 3 Wood to 1 Coal (no limit).',
         },
-        'iron_smelter' => {
+        'tile_iron_smelter' => {
             'era' => 3,
             'count' => 1,
             'type' => 'refiner',
@@ -632,7 +632,7 @@ $VAR1 = {
             'title' => 'Iron Smelter',
             'description' => 'Convert either 2 Ore and 6 Wood or 2 Ore and 1 Coal to 1 Iron (no limit).',
         },
-        'builder_house' => {
+        'tile_builder_house' => {
             'era'       => 3,
             'count'     => 1,
             'type'      => 'builder',
@@ -646,11 +646,11 @@ $VAR1 = {
                     'clay'      => 2,
                 },
             ],
-            'upgrades'  => 'building_flat',
+            'upgrade_building'  => 'building_flat',
             'title' => 'Builder - House',
             'description' => 'Spend 2 Tools, 1 Plank, 1 Brick, and 2 Clay and upgrade a Flat to a House. (No Limit)',
         },
-        'builder_hunting_grounds' => {
+        'tile_builder_hunting_grounds' => {
             'era'       => 3,
             'count'     => 1,
             'type'      => 'builder',
@@ -663,11 +663,11 @@ $VAR1 = {
                     'clay'      => 2,
                 },
             ],
-            'upgrades'  => 'building_hunting_lodge',
+            'upgrade_building'  => 'building_hunting_lodge',
             'title' => 'Builder - Hunting Grounds',
             'description' => 'Spend 3 Tools, 4 Wood, and 2 Clay and upgrade a Hunting Lodge to a Hunting Grounds. (No Limit)',
         },
-        'builder_community_hall' => {
+        'tile_builder_community_hall' => {
             'era'       => 3,
             'count'     => 1,
             'type'      => 'builder',
@@ -681,11 +681,11 @@ $VAR1 = {
                     'iron'      => 3,
                 },
             ],
-            'upgrades'  => 'building_house',
+            'upgrade_building'  => 'building_house',
             'title' => 'Builder - Community Hall',
             'description' => 'Spend 3 Tools, 3 Planks, 3 Bricks, and 3 Iron and upgrade a House to a Community Hall. (Limit 1)',
         },
-        'builder_boardinghouse' => {
+        'tile_builder_boardinghouse' => {
             'era'       => 3,
             'count'     => 1,
             'type'      => 'builder',
@@ -702,7 +702,7 @@ $VAR1 = {
             'title' => 'Builder - Boardinghouse',
             'description' => 'Spend 2 Tools, 1 Plank, 1 Brick, and 1 Iron to build a Boardinghouse. (Limit 2)',
         },
-        'builder_stables' => {
+        'tile_builder_stables' => {
             'era'       => 3,
             'count'     => 1,
             'type'      => 'builder',
@@ -719,7 +719,7 @@ $VAR1 = {
             'title' => 'Builder - Stables',
             'description' => 'Spend 3 Tools, 2 Planks, 2 Bricks, and 2 Iron to build a Stable. (Limit 1)',
         },
-        'builder_customs_house' => {
+        'tile_builder_customs_house' => {
             'era'       => 3,
             'count'     => 1,
             'type'      => 'builder',
@@ -736,7 +736,7 @@ $VAR1 = {
             'title' => 'Builder - Customs House',
             'description' => 'Spend 2 Tools, 2 Planks, 2 Bricks, and 1 Ore to build a Customs House. (Limit 1)',
         },
-        'builder_tailor_shop' => {
+        'tile_builder_tailor_shop' => {
             'era'       => 3,
             'count'     => 1,
             'type'      => 'builder',
@@ -752,7 +752,7 @@ $VAR1 = {
             'title' => 'Builder - Tailor Shop',
             'description' => 'Spend 3 Tools, 2 Bricks, and 2 Clay to build a Tailor Shop. (No Limit)',
         },
-        'forest' => {
+        'tile_forest' => {
             'era'       => 4,
             'count'     => 1,
             'type'      => 'gather',
@@ -765,7 +765,7 @@ $VAR1 = {
             'title' => 'Forest',
             'description' => 'Gain 4 Wood.',
         },
-        'clay_pit' => {
+        'tile_clay_pit' => {
             'era'       => 4,
             'count'     => 1,
             'type'      => 'gather',
@@ -778,7 +778,7 @@ $VAR1 = {
             'title' => 'Clay Pit',
             'description' => 'Gain 3 Clay.',
         },
-        'ore_pit' => {
+        'tile_ore_pit' => {
             'era'       => 4,
             'count'     => 1,
             'type'      => 'gather',
@@ -790,7 +790,7 @@ $VAR1 = {
             'title' => 'Ore Pit',
             'description' => 'Gain 1 Ore.',
         },
-        'ore_mine' => {
+        'tile_ore_mine' => {
             'era'       => 4,
             'count'     => 1,
             'type'      => 'gather',
@@ -802,7 +802,7 @@ $VAR1 = {
             'title' => 'Ore Mine',
             'description' => 'Gain 2 Ore.',
         },
-        'tailor' => {
+        'tile_tailor' => {
             'era' => 4,
             'count' => 1,
             'type' => 'sustenance',
@@ -826,7 +826,7 @@ $VAR1 = {
             }
             'description' => 'Gain 3 Cloth or sell 2 Cloth for 1 Gold each (No Limit).',
         },
-        'carpenter' => {
+        'tile_carpenter' => {
             'era' => 4,
             'count' => 1,
             'type' => 'refiner',
@@ -849,7 +849,7 @@ $VAR1 = {
             'title' => 'Carpenter',
             'description' => 'Convert 1 Wood to 1 Plank (no limit).',
         },
-        'brickburner' => {
+        'tile_brickburner' => {
             'era' => 4,
             'count' => 1,
             'type' => 'refiner',
@@ -873,7 +873,7 @@ $VAR1 = {
             'title' => 'Brickburner',
             'description' => 'Convert 1 Wood, and 1 Clay to 2 Bricks (no limit).',
         },
-        'charburner' => {
+        'tile_charburner' => {
             'era' => 4,
             'count' => 1,
             'type' => 'refiner',
@@ -895,7 +895,7 @@ $VAR1 = {
             'title' => 'Charburner',
             'description' => 'Convert 5 Wood to 2 Coal (no limit).',
         },
-        'ironsmith' => {
+        'tile_ironsmith' => {
             'era' => 4,
             'count' => 1,
             'type' => 'refiner',
@@ -932,7 +932,7 @@ $VAR1 = {
             'title' => 'Ironsmith',
             'description' => 'Convert either 1 Iron and 6 Wood or 1 Iron and 1 Coal to 6 Tools (no limit).',
         },
-        'builder_textile_mill' => {
+        'tile_builder_textile_mill' => {
             'era'       => 4,
             'count'     => 1,
             'type'      => 'builder',
@@ -946,11 +946,11 @@ $VAR1 = {
                     'planks'    => 3,
                 },
             ],
-            'upgrades'  => 'building_tailor_shop',
+            'upgrade_building'  => 'building_tailor_shop',
             'title' => 'Builder - Textile Mill',
             'description' => 'Spend 3 Tools, 3 Wood, 3 Planks, and 1 Iron and upgrade a Tailor Shop to a Textile Mill. (No Limit)',
         },
-        'builder_storage_hall_9' => {
+        'tile_builder_storage_hall_9' => {
             'era'       => 4,
             'count'     => 1,
             'type'      => 'builder',
@@ -963,11 +963,11 @@ $VAR1 = {
                     'bricks'    => 3,
                 },
             ],
-            'upgrades'  => 'building_storage_house_5',
+            'upgrade_building'  => 'building_storage_house_5',
             'title' => 'Builder - Storage Hall (9)',
             'description' => 'Spend 3 Tools, 1 Iron, and 3 Bricks and upgrade a Storage House (5) to a Storage Hall (9). (Limit 3)',
         },
-        'builder_casino' => {
+        'tile_builder_casino' => {
             'era'       => 4,
             'count'     => 1,
             'type'      => 'builder',
@@ -984,7 +984,7 @@ $VAR1 = {
             'title' => 'Builder - Casino',
             'description' => 'Spend 3 Tools, 3 Clay, 2 Iron, and 2 Bricks to build a Casino. (No Limit)',
         },
-        'chief_officer' => {
+        'tile_chief_officer' => {
             'era' => 4,
             'count' => 1,
             'type' => 'chief_officer',
@@ -992,14 +992,617 @@ $VAR1 = {
             'title' => 'Chief Officer',
             'description' => 'Gain 1 Gold, and 1 Tool, the First Player Marker and swap two tiles.',
         },
-
-
-
+    },
+    'development'     => {
+        'development_stone_axe_1' => {
+            'id' => 101,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'wood' => 4,
+            },
+            'title' => 'Stone Axe',
+            'description' => 'Gain 4 Wood.',
+            'flavor' => "You made yourself a stone axe to cut some wood: unfortunately, it didn't last very long.",
+        },
+        'development_stone_axe_2' => {
+            'id' => 102,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'wood' => 4,
+            },
+            'title' => 'Stone Axe',
+            'description' => 'Gain 4 Wood.',
+            'flavor' => "You made yourself a stone axe to cut some wood: unfortunately, it didn't last very long.",
+        },
+        'development_wood_shovel_1' => {
+            'id' => 103,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'clay' => 3,
+            },
+            'title' => 'Wood Shovel',
+            'description' => 'Gain 3 Clay.',
+            'flavor' => "Your goal was to farm some clay with your new shovel ... \"Crack!\"",
+        },
+        'development_wood_shovel_2' => {
+            'id' => 104,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'clay' => 3,
+            },
+            'title' => 'Wood Shovel',
+            'description' => 'Gain 3 Clay.',
+            'flavor' => "Your goal was to farm some clay with your new shovel ... \"Crack!\"",
+        },
+        'development_wood_saw_1' => {
+            'id' => 105,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'planks' => 2,
+            },
+            'title' => 'Wood Saw',
+            'description' => 'Gain 2 Planks.',
+            'flavor' => "Quality isn't half of what it used to be: your new saw lasted for a couple of planks.",
+        },
+        'development_wood_saw_2' => {
+            'id' => 106,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'planks' => 2,
+            },
+            'title' => 'Wood Saw',
+            'description' => 'Gain 2 Planks.',
+            'flavor' => "Quality isn't half of what it used to be: your new saw lasted for a couple of planks.",
+        },
+        'development_ruin_1' => {
+            'id' => 107,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'bricks' => 1,
+            },
+            'title' => 'Ruin',
+            'description' => 'Gain 1 Brick.',
+            'flavor' => "You salvaged a brick from an old ruin.",
+        },
+        'development_ruin_2' => {
+            'id' => 108,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'bricks' => 1,
+            },
+            'title' => 'Ruin',
+            'description' => 'Gain 1 Brick.',
+            'flavor' => "You salvaged a brick from an old ruin.",
+        },
+        'development_anvil' => {
+            'id' => 109,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+                'tools' => 1,
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                            'clay' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'tools' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 1,
+            'title' => 'Anvil',
+            'description' => 'Convert 1 Wood, and 1 Clay to 1 Tool. (Limit 1)',
+            'flavor' => "You leave your anvil unattended for one second ... and it's gone.",
+        },
+        'development_guestroom_1' => {
+            'id' => 110,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'wood' => 2,
+                'clay' => 2,
+            },
+            'title' => 'Guestroom',
+            'description' => 'Gain 2 Wood, and 2 Clay.',
+            'flavor' => "Your last customer completely destroyed your guestroom. At least you could salvage some resources ... ",
+        },
+        'development_guestroom_2' => {
+            'id' => 111,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'wood' => 2,
+                'clay' => 2,
+            },
+            'title' => 'Guestroom',
+            'description' => 'Gain 2 Wood, and 2 Clay.',
+            'flavor' => "Your last customer completely destroyed your guestroom. At least you could salvage some resources ... ",
+        },
+        'development_handsaw' => {
+            'id' => 112,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 1,
+                        },
+                    },
+                },
+                {
+                    'from' => {
+                        {
+                            'wood' => 3,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 2,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Handsaw',
+            'description' => 'Convert 2 Wood to 1 Plank and/or 3 Wood to 2 Planks. (No Limit)',
+            'flavor' => "Hopefully this one last longer than the last one ... nope.",
+        },
+        'development_clay_oven' => {
+            'id' => 113,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                            'clay' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'bricks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 2,
+            'title' => 'Clay Oven',
+            'description' => 'Convert 1 Wood, and 1 Clay to 1 Brick. (Limit 2)',
+            'flavor' => "You thought it'd be a good idea to burn some bricks in your clay oven: wrong.",
+        },
+        'development_building_contract_farm' => {
+            'id' => 114,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'wood' => 1,
+            },
+            'builds' => 'building_farm',
+            'limit' => 2,
+            'title' => 'Building Contract - Farm',
+            'description' => 'For 1 Wood, build one Farm. (Limit 2)',
+            'flavor' => "Two are better than one.",
+        },
+        'development_building_contract_estate' => {
+            'id' => 115,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 1,
+                'wood' => 2,
+                'bricks' => 1,
+            },
+            'upgrade_building' => 'building_farm',
+            'builds' => 'building_estate',
+            'limit' => 1,
+            'title' => 'Building Contract - Estate',
+            'description' => 'For 1 Tool, 2 Wood, and 1 Brick upgrade a Farm to an Estate. (Limit 1)',
+            'flavor' => "Longer, wider, higher!",
+        },
+        'development_building_contract_flat' => {
+            'id' => 116,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 1,
+                'wood' => 2,
+            },
+            'upgrade_building' => 'building_farm',
+            'builds' => 'building_flat',
+            'limit' => 1,
+            'title' => 'Building Contract - Flat',
+            'description' => 'For 1 Tool, and 2 Wood upgrade a Farm to a Flat. (Limit 1)',
+            'flavor' => "As cheaps as they can get ... ",
+        },
+        'development_building_contract_foresters_house' => {
+            'id' => 117,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 2,
+                'wood' => 2,
+            },
+            'builds' => 'building_foresters_house',
+            'limit' => 1,
+            'title' => 'Building Contract - Forester\'s House',
+            'description' => 'For 2 Tools, and 2 Wood build a Forester's House. (Limit 1)',
+            'flavor' => "You know what's good? More wood!",
+        },
+        'development_building_contract_hollow' => {
+            'id' => 118,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 2,
+                'clay' => 2,
+            },
+            'builds' => 'building_hollow',
+            'limit' => 1,
+            'title' => 'Building Contract - Hollow',
+            'description' => 'For 2 Tools, and 2 Clay build a Hollow. (Limit 1)',
+            'flavor' => "I won't say nay to more clay.",
+        },
+        'development_building_contract_hunting_lodge' => {
+            'id' => 119,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 2,
+                'wood' => 2,
+                'clay' => 1,
+            },
+            'builds' => 'building_hunting_lodge',
+            'limit' => 1,
+            'title' => 'Building Contract - Hunting Lodge',
+            'description' => 'For 2 Tools, 2 Wood, and 1 Clay build a Hunting Lodge. (Limit 1)',
+            'flavor' => "Improve your aim and hunt some game!",
+        },
+        'development_building_contract_storage_shed' => {
+            'id' => 120,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 1,
+                'wood' => 1,
+            },
+            'builds' => 'building_storage_shed_2',
+            'limit' => 2,
+            'title' => 'Building Contract - Storage Shed (2)',
+            'description' => 'For 1 Tool, and 1 Wood build a Storage Shed (2). (Limit 2)',
+            'flavor' => "Every lad needs a shed!",
+        },
+        'development_automobile' => {
+            'id' => 121,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'special',
+            'duration' => 'game',
+            'vp' => 1,
+            'cost' => {
+                'tools' => 1,
+                'food' => 2,
+            },
+            'special' => 'special_automobile',
+            'title' => 'Automobile',
+            'description' => 'You no longer have to pay tools or sustenance goods when paying the fee.',
+            'flavor' => "Who uses carriages these days anyway?",
+        },
+        'development_pass' => {
+            'id' => 122,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'special',
+            'duration' => 'game',
+            'vp' => 1,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 1,
+                'clay' => 1,
+            },
+            'special' => 'special_pass',
+            'title' => 'Pass',
+            'description' => 'You no longer have to pay building resources when paying the fee.',
+            'flavor' => "It's not what you know but who you know.",
+        },
+        'development_axe' => {
+            'id' => 123,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'bonus',
+            'duration' => 'game',
+            'vp' => 1,
+            'cost' => {
+                'wood' => 3,
+            },
+            'bonus' => {
+                'wood' => 1,
+            },
+            'title' => 'Axe',
+            'description' => 'Gain +1 Wood whenever you get wood from a place.',
+            'flavor' => "This axe appears to last for ages.",
+        },
+        'development_spade' => {
+            'id' => 124,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'bonus',
+            'duration' => 'game',
+            'vp' => 1,
+            'cost' => {
+                'clay' => 3,
+            },
+            'bonus' => {
+                'clay' => 1,
+            },
+            'title' => 'Spade',
+            'description' => 'Gain +1 Clay whenever you get clay from a place.',
+            'flavor' => "Lo and behold: a spade that doesn't break immediately.",
+        },
+        'development_vegetable_garden' => {
+            'id' => 125,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'clay' => 1,
+                'planks' => 1,
+            },
+            'production' => {
+                'food' => 1,
+            },
+            'title' => 'Vegetable Garden',
+            'description' => 'Gain +1 Food during Production.',
+            'flavor' => "Are you ready for a vegan diet?",
+        },
+        'development_beavers_lodge' => {
+            'id' => 126,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 1,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 2,
+            },
+            'production' => {
+                'wood' => 1,
+            },
+            'title' => 'Beaver\'s Lodge',
+            'description' => 'Gain +1 Wood during Production.',
+            'flavor' => "The beaver is gnawed impressed.",
+        },
+        'development_loam_hollow' => {
+            'id' => 127,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'clay' => 2,
+            },
+            'production' => {
+                'clay' => 1,
+            },
+            'title' => 'Loam Hollow',
+            'description' => 'Gain +1 Clay during Production.',
+            'flavor' => "Clay for days!",
+        },
+        'development_holiday_cabin_1' => {
+            'id' => 128,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 1,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 1,
+            },
+            'workers' => {
+                'farmer' => 1,
+            },
+            'title' => 'Holiday Cabin',
+            'description' => 'Gain +1 Farmer.',
+            'flavor' => "Small, but perfectly formed.",
+        },
+        'development_holiday_cabin_2' => {
+            'id' => 129,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 1,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 1,
+            },
+            'workers' => {
+                'farmer' => 1,
+            },
+            'title' => 'Holiday Cabin',
+            'description' => 'Gain +1 Farmer.',
+            'flavor' => "Small, but perfectly formed.",
+        },
+        'development_holiday_flat_1' => {
+            'id' => 130,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 1,
+                'planks' => 1,
+            },
+            'workers' => {
+                'citizen' => 1,
+            },
+            'title' => 'Holiday Flat',
+            'description' => 'Gain +1 Citizen.',
+            'flavor' => "How does a permanent vacation sound?",
+        },
+        'development_holiday_flat_2' => {
+            'id' => 131,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 1,
+                'planks' => 1,
+            },
+            'workers' => {
+                'citizen' => 1,
+            },
+            'title' => 'Holiday Flat',
+            'description' => 'Gain +1 Citizen.',
+            'flavor' => "How does a permanent vacation sound?",
+        },
+        'development_storehouse' => {
+            'id' => 132,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'planks' => 1,
+            },
+            'storage' => {
+                'warehouse' => {
+                    'type' => '',
+                    'count' => 1,
+                },
+            }
+            'title' => 'Storehouse',
+            'description' => 'Gain +1 Warehouse.',
+            'flavor' => "This must be the world's smallest warehouse. Still better than nothing.",
+        },
+        'development_training' => {
+            'id' => 133,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'special',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'wood' => 2,
+                'planks' => 1,
+            },
+            'special' => 'special_training',
+            'title' => 'Training',
+            'description' => 'Draw +1 Development Card at the Librarian.',
+            'flavor' => "Education never hurts: surely you'll have some great ideas now.",
+        },
+        'development_deed_registration' => {
+            'id' => 134,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'special',
+            'duration' => 'game',
+            'vp' => 1,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 4,
+            },
+            'special' => 'special_deed_registration',
+            'title' => 'Deed Registration',
+            'description' => 'Whenever you build at least one farmer building (including the Factory) at a Builder, you may also build Farms for 1 Tool and 1 Wood each.',
+            'flavor' => "Yo dawg, I heard you like farms ... ",
+        },
+        'development_ticket' => {
+            'id' => 135,
+            'era' => 1,
+            'count' => 1,
+            'type' => 'special',
+            'duration' => 'count',
+            'cost' => {
+                'wood' => 3,
+            },
+            'special' => 'special_ticket',
+            'title' => 'Ticket',
+            'description' => 'Each time you move a steward or special ambassador, you may pay an additional 2 Wood to move the steward or special ambassador to a place of your choice.',
+            'flavor' => "Have a nice trip!",
+        },
 
 
 
     },
-
-
 
 };

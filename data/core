@@ -1098,7 +1098,7 @@ $VAR1 = {
             'description' => 'Gain 1 Brick.',
             'flavor' => "You salvaged a brick from an old ruin.",
         },
-        'development_anvil' => {
+        'development_anvil_1' => {
             'id' => 109,
             'era' => 1,
             'count' => 1,
@@ -1124,7 +1124,7 @@ $VAR1 = {
             ],
             'limit' => 1,
             'title' => 'Anvil',
-            'description' => 'Convert 1 Wood, and 1 Clay to 1 Tool. (Limit 1)',
+            'description' => 'Gain 1 Tool and convert 1 Wood, and 1 Clay to 1 Tool. (Limit 1)',
             'flavor' => "You leave your anvil unattended for one second ... and it's gone.",
         },
         'development_guestroom_1' => {
@@ -1599,6 +1599,416 @@ $VAR1 = {
             'title' => 'Ticket',
             'description' => 'Each time you move a steward or special ambassador, you may pay an additional 2 Wood to move the steward or special ambassador to a place of your choice.',
             'flavor' => "Have a nice trip!",
+        },
+        'development_wood_saw_3' => {
+            'id' => 201,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'planks' => 2,
+            },
+            'title' => 'Wood Saw',
+            'description' => 'Gain 2 Planks.',
+            'flavor' => "Quality isn't half of what it used to be: your new saw lasted for a couple of planks.",
+        },
+        'development_wood_saw_4' => {
+            'id' => 202,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'planks' => 2,
+            },
+            'title' => 'Wood Saw',
+            'description' => 'Gain 2 Planks.',
+            'flavor' => "Quality isn't half of what it used to be: your new saw lasted for a couple of planks.",
+        },
+        'development_ruin_3' => {
+            'id' => 203,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'bricks' => 1,
+            },
+            'title' => 'Ruin',
+            'description' => 'Gain 1 Brick.',
+            'flavor' => "You salvaged a brick from an old ruin.",
+        },
+        'development_ruin_4' => {
+            'id' => 204,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'bricks' => 1,
+            },
+            'title' => 'Ruin',
+            'description' => 'Gain 1 Brick.',
+            'flavor' => "You salvaged a brick from an old ruin.",
+        },
+        'development_fireplace' => {
+            'id' => 205,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'food' => 2,
+            },
+            'title' => 'Fireplace',
+            'description' => 'Gain 2 Food.',
+            'flavor' => "Making fire in a forest ... you sure this is a good idea?",
+        },
+        'development_anvil_2' => {
+            'id' => 206,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+                'tools' => 1,
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                            'clay' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'tools' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 1,
+            'title' => 'Anvil',
+            'description' => 'Gain 1 Tool and convert 1 Wood, and 1 Clay to 1 Tool. (Limit 1)',
+            'flavor' => "You leave your anvil unattended for one second ... and it's gone.",
+        },
+        'development_anvil_3' => {
+            'id' => 207,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+                'tools' => 1,
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                            'clay' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'tools' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 1,
+            'title' => 'Anvil',
+            'description' => 'Gain 1 Tool and convert 1 Wood, and 1 Clay to 1 Tool. (Limit 1)',
+            'flavor' => "You leave your anvil unattended for one second ... and it's gone.",
+        },
+        'development_ripsaw' => {
+            'id' => 208,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 4,
+            'title' => 'Ripsaw',
+            'description' => 'Convert 1 Wood to 1 Plank. (Limit 4)',
+            'flavor' => "Looks solid ... at first glance.",
+        },
+        'development_stone_oven' => {
+            'id' => 209,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'clay' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'bricks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 3,
+            'title' => 'Stone Oven',
+            'description' => 'Convert 1 Clay to 1 Brick. (Limit 3)',
+            'flavor' => "Burning bricks in your stone oven - also not a good idea ... ",
+        },
+        'development_toolmaker' => {
+            'id' => 210,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'planks' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'tools' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Toolmaker',
+            'description' => 'Convert 2 Planks to 1 Tool. (No Limit)',
+            'flavor' => "Your neighbor makes you some tools.",
+        },
+        'development_building_contract_apartment' => {
+            'id' => 211,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 1,
+                'clay' => 2,
+                'planks' => 1,
+            },
+            'upgrade_building' => 'building_flat',
+            'builds' => 'building_apartment',
+            'limit' => 1,
+            'title' => 'Building Contract - Apartment',
+            'description' => 'For 1 Tool, 2 Clay, and 1 Plank upgrade a Flat to an Apartment. (Limit 1)',
+            'flavor' => "Longer, wider, higher!",
+        },
+        'development_building_contract_iron_mine' => {
+            'id' => 212,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 2,
+                'planks' => 2,
+                'bricks' => 2,
+            },
+            'builds' => 'building_iron_mine',
+            'limit' => 1,
+            'title' => 'Building Contract - Iron Mine',
+            'description' => 'For 2 Tools, 2 Planks, and 2 Bricks build an Iron Mine. (Limit 1)',
+            'flavor' => "More ore!",
+        },
+        'development_building_contract_storage_house_5' => {
+            'id' => 213,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 2,
+                'wood' => 1,
+                'bricks' => 1,
+            },
+            'upgrade_building' => 'building_storage_shed_2',
+            'builds' => 'building_storage_house_5',
+            'limit' => 1,
+            'title' => 'Building Contract - Storage House (5)',
+            'description' => 'For 2 Tools, 1 Wood, and 1 Brick upgrade a Storage Shed to a Storage House. (Limit 1)',
+            'flavor' => "More than double the space, baby!",
+        },
+        'development_panel_saw' => {
+            'id' => 214,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 2,
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 1,
+            'title' => 'Panel Saw',
+            'description' => 'Convert 2 Wood to 1 Plank during Production. (Limit 1)',
+            'flavor' => "Made in Germany.",
+        },
+        'development_kiln' => {
+            'id' => 215,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'bricks' => 2,
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'clay' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'bricks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 1,
+            'title' => 'Kiln',
+            'description' => 'Convert 2 Clay to 1 Brick during Production. (Limit 1)',
+            'flavor' => "This is where you burn Bricks.",
+        },
+        'development_iron_pickaxe' => {
+            'id' => 216,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'bonus',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'ore' => 2,
+            },
+            'bonus' => {
+                'ore' => 1,
+            },
+            'title' => 'Iron Pickaxe',
+            'description' => 'Gain +1 Ore whenever you get Ore from a place.',
+            'flavor' => "Finally, a tool that won't break.",
+        },
+        'development_fruit_farm' => {
+            'id' => 217,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'bricks' => 1,
+                'planks' => 1,
+            },
+            'production' => {
+                'food' => 2,
+            },
+            'title' => 'Fruit Farm',
+            'description' => 'Gain +2 Food during Production.',
+            'flavor' => '"Squire von Ribbeck at Ribbeck in Havelland. In his garde there stood a pear tree grand ... "',
+        },
+        'development_ore_tunnel' => {
+            'id' => 218,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'bricks' => 2,
+                'planks' => 1,
+                'ore' => 1,
+            },
+            'production' => {
+                'ore' => 1,
+            },
+            'title' => 'Ore Tunnel',
+            'description' => 'Gain +1 Ore during Production.',
+            'flavor' => "Here lives and works your little pit pony.",
+        },
+        'development_workshop' => {
+            'id' => 219,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'clay' => 3,
+                'planks' => 2,
+            },
+            'production' => {
+                'tools' => 1,
+            },
+            'title' => 'Workshop',
+            'description' => 'Gain +1 Tool during Production.',
+            'flavor' => "Masterfully, he slams his hammer down ... on his thumb!",
+        },
+        'development_village_chapel' => {
+            'id' => 220,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'planks' => 2,
+            },
+            'production' => {
+                'gold' => 1,
+            },
+            'title' => 'Village Chapel',
+            'description' => 'Gain +1 Gold during Production.',
+            'flavor' => "We're collecting for the poor ... ",
         },
 
 

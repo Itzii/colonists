@@ -1,8 +1,30 @@
 $VAR1 = {
+    'eras' => {
+        [
+            'tiles' => [
+                'tile_builder_farm',
+                'tile_builder_library',
+                'tile_builder_hunting_lodge',
+                'tile_builder_foresters_house',
+                'tile_builder_storage_shed',
+                'tile_riverbank_grove',
+                'tile_riverbank_grove',
+                'tile_joiner',
+                'tile_developer',
+                'tile_librarian',
+                'tile_diplomat',
+                'tile_head_official',
+            ],
+        ],
+        [
+            'tiles' => [
+
+            ],        
+        ],
+
+    },
     'tiles'     => {
         'tile_builder_farm' => {
-            'era'       => 0,
-            'count'     => 1,
             'type'      => 'builder',
             'builds'    => 'building_farm',
             'limit'     => -1,
@@ -16,8 +38,6 @@ $VAR1 = {
             'description' => 'Spend 1 Tool, and 1 Wood and build a Farm. (No Limit)',
         },
         'tile_builder_library' => {
-            'era'       => 0,
-            'count'     => 1,
             'type'      => 'builder',
             'builds'    => 'building_library',
             'limit'     => 1,
@@ -32,8 +52,6 @@ $VAR1 = {
             'description' => 'Spend 1 Tool, 1 Wood, 1 Plank and build a Library. (Limit 1)',
         },
         'tile_builder_hunting_lodge' => {
-            'era'       => 0,
-            'count'     => 1,
             'type'      => 'builder',
             'builds'    => 'building_hunting_lodge',
             'limit'     => -1,
@@ -47,9 +65,7 @@ $VAR1 = {
             'title' => 'Builder - Hunting Lodge',
             'description' => 'Spend 3 Tools, 2 Wood, and 1 Clay and build a Hunting Lodge. (No Limit)',
         },
-        'tile_builder_foresters_house => {
-            'era'       => 0,
-            'count'     => 1,
+        'tile_builder_foresters_house' => {
             'type'      => 'builder',
             'builds'    => 'building_foresters_house',
             'limit'     => -1,
@@ -62,9 +78,7 @@ $VAR1 = {
             'title' => 'Builder - Forester\'s House',
             'description' => 'Spend 2 Tools and 1 Wood and build a Forester\'s House. (Limit 3)',
         },
-        'tile_builder_storage_shed_2' => {
-            'era'       => 0,
-            'count'     => 1,
+        'tile_builder_storage_shed' => {
             'type'      => 'builder',
             'builds'    => 'building_storage_shed_2',
             'limit'     => 3,
@@ -78,8 +92,6 @@ $VAR1 = {
             'description' => 'Spend 2 Tools and 3 Wood and build a Storage Shed (2). (Limit 3)',
         },
         'tile_riverbank_grove' => {
-            'era'       => 0,
-            'count'     => 2,
             'type'      => 'gather',
             'resource'  => [
                 {
@@ -89,9 +101,7 @@ $VAR1 = {
             'title' => 'Riverbank Grove',
             'description' => 'Gain 2 Wood.',
         },
-        'joiner' => {
-            'era' => 0,
-            'count' => 1,
+        'tile_joiner' => {
             'type' => 'refiner',
             'converts' => [
                 {
@@ -112,29 +122,21 @@ $VAR1 = {
             'description' => 'Convert 2 Wood to 1 Plank (no limit).',
         },
         'tile_developer' => {
-            'era' => 0,
-            'count' => 1,
             'type' => 'developer',
             'title' => 'Developer',
             'description' => 'Gain 2 Tools and play a Development Card.',
         },
         'tile_librarian' => {
-            'era' => 0,
-            'count' => 1,
             'type' => 'librarian',
             'title' => 'Librarian',
             'description' => 'Gain 1 Gold and draw 2 Development Cards.',
         },
         'tile_diplomat' => {
-            'era'   => 0,
-            'count' => 1,
             'type' => 'diplomat',
             'title' => 'Diplomat',
             'description' => 'Build an embassy level.',
         },
         'tile_head_official' => {
-            'era'   => 0,
-            'count' => 1,
             'type' => 'head_official',
             'title' => 'Head Official',
             'description' => 'Gain 1 Clay and the First Player marker.',

@@ -1,7 +1,7 @@
 $VAR1 = {
     'eras' => {
-        [
-            'tiles' => [                                    # starting tiles
+        [ # era 0
+            'tiles' => [
                 { 'tile' => 'tile_builder_farm', },
                 { 'tile' => 'tile_builder_library', },
                 { 'tile' => 'tile_builder_hunting_lodge', },
@@ -16,8 +16,13 @@ $VAR1 = {
                 { 'tile' => 'tile_head_official', },
             ],
         ],
-        [
-            'tiles' => [                                   # era 1 tiles
+        [ #      era 1      ################################################################
+            'fee' => {
+                'sustenance' => [ 'tools', 'food' ],
+                'resource' => [ 'wood', 'clay', 'planks', 'bricks', 'coal', 'iron' ],
+                'count' => 1,
+            },
+            'tiles' => [
                 { 'tile' => 'tile_grove', },
                 { 'tile' => 'tile_grove', },
                 { 'tile' => 'tile_clay_delve', },
@@ -31,9 +36,208 @@ $VAR1 = {
                 { 'tile' => 'tile_builder_flat', },
                 { 'tile' => 'tile_baker', },
             ],
+            'markets' => [
+                {
+                    'sellable' => [
+                        {
+                            'clay' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'planks' => 1,
+                            'gold' => 2,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'food' => 1,
+                            'wood' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_farm',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 1,
+                                'wood'      => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'food' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'wood' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'clay' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_storage_shed',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 1,
+                                'wood'      => 2,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'clay' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'food' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_foresters_house',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 2,
+                                'wood'      => 3,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'wood' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'bricks' => 1,
+                            'gold' => 3,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'food' => 1,
+                            'clay' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_hunting_lodge',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 3,
+                                'wood'      => 2,
+                                'clay'      => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'food' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'bricks' => 1,
+                            'gold' => 3,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 2,
+                        },
+                        {
+                            'clay' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'refiner',
+                        'limit' => 1,
+                        'info' => {
+                            'from' => [
+                                {
+                                    'wood' => 2,
+                                }
+                            ],
+                            'to' => {
+                                'planks' => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'wood' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'clay' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'food' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'librarian',
+                        'limit' => 1,
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'planks' => 1,
+                            'gold' => 2,
+                        },
+                        {
+                            'bricks' => 1,
+                            'gold' => 3,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 2,
+                            'clay' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'head_official',
+                        'limit' => 1,
+                    },
+                },
+            ],
         ],
-        [
-            'tiles' => [                                  # era 2 tiles
+        [ #      era 2         ###########################################################################
+            'fee' => {
+                'sustenance' => [ 'tools', 'food' ],
+                'resource' => [ 'wood', 'clay', 'planks', 'bricks', 'coal', 'iron' ],
+                'count' => 2,
+            },
+            'tiles' => [
                 { 'tile' => 'tile_ore_pit', },
                 { 'tile' => 'tile_clay_pocket', },
                 { 'tile' => 'tile_riverbank_forest', 'replaces' => 'tile_riverbank_grove' },
@@ -47,9 +251,222 @@ $VAR1 = {
                 { 'tile' => 'tile_builder_iron_mine', },
                 { 'tile' => 'tile_builder_apartment', },
             ],
+            'markets' => [
+                {
+                    'sellable' => [
+                        {
+                            'clay' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'planks' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'food' => 2,
+                            'wood' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_estate',
+                            'upgrades' => 'building_farm',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 1,
+                                'wood'      => 3,
+                                'bricks'    => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'wood' => 3,
+                            'gold' => 1,
+                        },
+                        {
+                            'bricks' => 1,
+                            'gold' => 2,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'food' => 2,
+                            'clay' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_flat',
+                            'upgrades' => 'building_farm',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 1,
+                                'planks'    => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'food' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'bricks' => 1,
+                            'gold' => 2,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 2,
+                        },
+                        {
+                            'clay' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_hollow',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 2,
+                                'clay'    => 3,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'food' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'clay' => 2,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'planks' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_factory',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 3,
+                                'clay'      => 3,
+                                'wood'      => 3,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'clay' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'ore' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'refiner',
+                        'limit' => 1,
+                        'info' => {
+                            'from' => [
+                                {
+                                    'wood' => 1,
+                                    'clay' => 2,
+
+                                }
+                            ],
+                            'to' => {
+                                'bricks' => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'wood' => 3,
+                            'gold' => 1,
+                        },
+                        {
+                            'ore' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'clay' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'refiner',
+                        'limit' => 2,
+                        'info' => {
+                            'from' => [
+                                {
+                                    'wood' => 2,
+                                }
+                            ],
+                            'to' => {
+                                'planks' => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'food' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'planks' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 1,
+                            'clay' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'head_official',
+                    },
+                },
+            ],
         ],
-        [
-            'tiles' => [                                  # era 3 tiles
+        [ #         era 3    ################################################################
+            'fee' => {
+                'sustenance' => [ 'tools', 'food', 'cloth' ],
+                'resource' => [ 'wood', 'clay', 'planks', 'bricks', 'coal', 'iron' ],
+                'count' => 3,
+            },
+            'tiles' => [
                 { 'tile' => 'tile_weaver', },
                 { 'tile' => 'tile_riverbank_forest', 'replaces' => 'tile_riverbank_grove' },
                 { 'tile' => 'tile_clay_pit', },
@@ -63,9 +480,224 @@ $VAR1 = {
                 { 'tile' => 'tile_builder_customs_house', },
                 { 'tile' => 'tile_builder_tailor_shop', },
             ],
+            'markets' => [
+                {
+                    'sellable' => [
+                        {
+                            'food' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'bricks' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'cloth' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_storage_house',
+                            'upgrades' => 'building_storage_shed',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 2,
+                                'planks'    => 1,
+                                'bricks'    => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'cloth' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'planks' => 2,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'food' => 3,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_iron_mine',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 2,
+                                'planks'    => 2,
+                                'bricks'    => 3,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'cloth' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'ore' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 1,
+                            'clay' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_apartment',
+                            'upgrades' => 'building_flat',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 1,
+                                'planks'    => 2,
+                                'clay'    => 2,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'coal' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'iron' => 1,
+                            'gold' => 4,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'ore' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'refiner',
+                        'limit' => 1,
+                        'info' => {
+                            'from' => [
+                                {
+                                    'wood' => 3,
+                                }
+                            ],
+                            'to' => {
+                                'planks' => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'food' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'iron' => 1,
+                            'gold' => 4,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 2,
+                            'clay' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'refiner',
+                        'limit' => 1,
+                        'info' => {
+                            'from' => [
+                                {
+                                    'wood' => 3,
+                                }
+                            ],
+                            'to' => {
+                                'coal' => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'ore' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'coal' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'food' => 1,
+                            'planks' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'refiner',
+                        'limit' => 1,
+                        'info' => {
+                            'from' => [
+                                {
+                                    'clay' => 2,
+                                }
+                            ],
+                            'to' => {
+                                'bricks' => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'planks' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'bricks' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 3,
+                        },
+                        {
+                            'clay' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'head_official',
+                    },
+                },
+            ],
         ],
-        [
-            'tiles' => [                                  # era 4 tiles
+        [ #        era 4           ########################################################################
+            'fee' => {
+                'sustenance' => [ 'tools', 'food', 'cloth' ],
+                'resource' => [ 'wood', 'clay', 'planks', 'bricks', 'coal', 'iron' ],
+                'count' => 4,
+            },
+            'tiles' => [
                 { 'tile' => 'tile_forest', 'replaces' => 'tile_grove' },
                 { 'tile' => 'tile_clay_pit', 'replaces' => 'tile_clay_delve' },
                 { 'tile' => 'tile_ore_pit', },
@@ -78,6 +710,210 @@ $VAR1 = {
                 { 'tile' => 'tile_builder_textile_mill', },
                 { 'tile' => 'tile_builder_storage_hall', },
                 { 'tile' => 'tile_builder_casino', },
+            ],
+            'markets' => [
+                {
+                    'sellable' => [
+                        {
+                            'planks' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'coal' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'cloth' => 1,
+                            'wood' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_house',
+                            'upgrades' => 'building_flat',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 2,
+                                'planks'    => 1,
+                                'bricks'    => 1,
+                                'clay'      => 2,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'planks' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'bricks' => 2,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'wood' => 3,
+                        },
+                        {
+                            'clay' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'builder',
+                        'info' => {
+                            'building' => 'building_tailor_shop',
+                            'limit' => 1,
+                            'cost'      => {
+                                'tools'     => 3,
+                                'bricks'    => 2,
+                                'clay'      => 2,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'bricks' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'iron' => 1,
+                            'gold' => 3,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'food' => 1,
+                            'ore' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'refiner',
+                        'limit' => 2,
+                        'info' => {
+                            'from' => [
+                                {
+                                    'wood' => 3,
+                                }
+                            ],
+                            'to' => {
+                                'coal' => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'food' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'coal' => 1,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'bricks' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'refiner',
+                        'limit' => 3,
+                        'info' => {
+                            'from' => [
+                                {
+                                    'wood' => 2,
+                                }
+                            ],
+                            'to' => {
+                                'planks' => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'cloth' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'ore' => 2,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'food' => 2,
+                            'planks' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'refiner',
+                        'limit' => 2,
+                        'info' => {
+                            'from' => [
+                                {
+                                    'clay' => 2,
+                                }
+                            ],
+                            'to' => {
+                                'bricks' => 1,
+                            },
+                        },
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'ore' => 1,
+                            'gold' => 1,
+                        },
+                        {
+                            'iron' => 1,
+                            'gold' => 3,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'coal' => 1,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'head_official',
+                    },
+                },
+                {
+                    'sellable' => [
+                        {
+                            'food' => 2,
+                            'gold' => 1,
+                        },
+                        {
+                            'cloth' => 2,
+                            'gold' => 1,
+                        },
+                    ],
+                    'gainable' => [
+                        {
+                            'tools' => 1,
+                        },
+                        {
+                            'gold' => 2,
+                        },
+                    ],
+                    'doable' => {
+                        'type' => 'chief_official',
+                    },
+                },
             ],
         ],
     },
@@ -427,7 +1263,7 @@ $VAR1 = {
                     'tools'     => 1,
                     'wood'      => 1,
                 },
-            }
+            },
         },
         'tile_builder_library' => {
             'title'         => 'Builder - Library',
@@ -458,7 +1294,7 @@ $VAR1 = {
             },
         },
         'tile_builder_foresters_house' => {
-            'title'         => 'Builder - Forester\'s House',
+            'title'         => "Builder - Forester's House",
             'description'   => 'Spend 2 Tools and 1 Wood and build a Forester\'s House. (Limit 3)',
             'type'          => 'builder',
             'limit'         => -1,
@@ -1649,30 +2485,28 @@ $VAR1 = {
             'id' => 134,
             'era' => 1,
             'count' => 1,
-            'type' => 'special',
+            'type' => 'deed_registration',
             'duration' => 'game',
             'vp' => 1,
             'cost' => {
                 'tools' => 1,
                 'wood' => 4,
             },
-            'special' => 'special_deed_registration',
             'title' => 'Deed Registration',
             'description' => 'Whenever you build at least one farmer building (including the Factory) at a Builder, you may also build Farms for 1 Tool and 1 Wood each.',
             'flavor' => "Yo dawg, I heard you like farms ... ",
         },
-        'development_ticket' => {
+        'development_ticket_wood' => {
             'id' => 135,
             'era' => 1,
             'count' => 1,
-            'type' => 'special',
+            'type' => 'ticket_wood',
             'duration' => 'count',
             'cost' => {
                 'wood' => 3,
             },
-            'special' => 'special_ticket',
             'title' => 'Ticket',
-            'description' => 'Each time you move a steward or special ambassador, you may pay an additional 2 Wood to move the steward or special ambassador to a place of your choice.',
+            'description' => 'Each time you move a Steward or Ambassador, you may pay an additional 2 Wood to move the them to a place of your choice.',
             'flavor' => "Have a nice trip!",
         },
         'development_wood_saw_3' => {
@@ -2085,6 +2919,1619 @@ $VAR1 = {
             'description' => 'Gain +1 Gold during Production.',
             'flavor' => "We're collecting for the poor ... ",
         },
+        'development_slaughtering_blocks' => {
+            'id' => 221,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'produce_bonus',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 2,
+                'bricks' => 2,
+            },
+            'building_bonus' => {
+                'building' => 'building_hunting_lodge',
+                'food' => 1,
+            },
+            'title' => 'Slaughtering Blocks',
+            'description' => 'Hunting Lodges gain +1 Food during Production.',
+            'flavor' => "No animals were harmed here ...",
+        },
+        'development_cottage_1' => {
+            'id' => 222,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 4,
+                'bricks' => 1,
+            },
+            'workers' => {
+                'farmer' => 2,
+            },
+            'title' => 'Cottage',
+            'description' => 'Gain +2 Farmers.',
+            'flavor' => "What are these two up to?",
+        },
+        'development_cottage_2' => {
+            'id' => 223,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 4,
+                'bricks' => 1,
+            },
+            'workers' => {
+                'farmer' => 2,
+            },
+            'title' => 'Cottage',
+            'description' => 'Gain +2 Farmers.',
+            'flavor' => "What are these two up to?",
+        },
+        'development_hostel_1' => {
+            'id' => 224,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'clay' => 2,
+                'planks' => 3,
+            },
+            'workers' => {
+                'citizen' => 2,
+            },
+            'title' => 'Hostel',
+            'description' => 'Gain +2 Citizens.',
+            'flavor' => "I swear, a second ago, the guy on the painting was looking in another direction ... ",
+        },
+        'development_hostel_2' => {
+            'id' => 225,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'clay' => 2,
+                'planks' => 3,
+            },
+            'workers' => {
+                'citizen' => 2,
+            },
+            'title' => 'Hostel',
+            'description' => 'Gain +2 Citizens.',
+            'flavor' => "I swear, a second ago, the guy on the painting was looking in another direction ... ",
+        },
+        'development_storehouse_2' => {
+            'id' => 226,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'planks' => 1,
+            },
+            'storage' => {
+                'warehouse' => {
+                    'type' => '',
+                    'count' => 1,
+                },
+            }
+            'title' => 'Storehouse',
+            'description' => 'Gain +1 Warehouse.',
+            'flavor' => "This must be the world's smallest warehouse. Still better than nothing.",
+        },
+        'development_wood_warehouse' => {
+            'id' => 227,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 3,
+            },
+            'storage' => {
+                'warehouse' => {
+                    'type' => 'wood',
+                    'count' => 3,
+                },
+            }
+            'title' => 'Wood Warehouse',
+            'description' => 'Gain +3 Warehouse (Wood only).',
+            'flavor' => "Store me some wood, would'ya?",
+        },
+        'development_clay_warehouse' => {
+            'id' => 228,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'clay' => 2,
+            },
+            'storage' => {
+                'warehouse' => {
+                    'type' => 'clay',
+                    'count' => 2,
+                },
+            }
+            'title' => 'Clay Warehouse',
+            'description' => 'Gain +2 Warehouse (Clay only).',
+            'flavor' => "Stores all the clay! (Not quite but ... advertising!)",
+        },
+        'development_ore_warehouse' => {
+            'id' => 229,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'ore' => 2,
+            },
+            'storage' => {
+                'warehouse' => {
+                    'type' => 'ore',
+                    'count' => 2,
+                },
+            }
+            'title' => 'Ore Warehouse',
+            'description' => 'Gain +2 Warehouse (Ore only).',
+            'flavor' => "One ore, two ore, red ore, blue ore ... I think I'm confusing something ... ",
+        },
+        'development_food_warehouse' => {
+            'id' => 230,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'food' => 3,
+            },
+            'storage' => {
+                'warehouse' => {
+                    'type' => 'food',
+                    'count' => 3,
+                },
+            }
+            'title' => 'Food Warehouse',
+            'description' => 'Gain +3 Warehouse (Food only).',
+            'flavor' => "You little hamster ... ",
+        },
+        'development_dolly' => {
+            'id' => 231,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'dolly',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'planks' => 3,
+            },
+            'title' => 'Dolly',
+            'description' => 'Once per turn, you may pay with up to 3 goods from buffers.',
+            'flavor' => "If this one breaks ... I swear ...",
+        },
+        'development_council_chamber' => {
+            'id' => 232,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'council_chamber',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'bricks' => 1,
+            },
+            'title' => 'Council Chamber',
+            'description' => 'Alternative Market Action: swap two adjacent unoccupied places.',
+            'flavor' => "The councilmen owe you some favors ...",
+        },
+        'development_social_services' => {
+            'id' => 233,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'social_services',
+            'duration' => 'game',
+            'vp' => 0,
+            'cost' => {
+                'tools' => 1,
+                'wood' => 3,
+                'clay' => 3,
+            },
+            'title' => 'Social Services',
+            'description' => 'At Game End: Receive +1 Gold for each unemployed Farmer (Max 5)',
+            'flavor' => "Five more applications and then I'm gone for lunch.",
+        },
+        'development_apprentice' => {
+            'id' => 234,
+            'era' => 2,
+            'count' => 1,
+            'type' => 'apprentice',
+            'duration' => 'limited',
+            'vp' => 0,
+            'cost' => {
+                'tools' => 1,
+                'planks' => 1,
+                'bricks' => 1,
+            },
+            'title' => 'Apprentice',
+            'description' => 'Gain +2 Gold and one Steward. After 3 turns discard extra Steward.',
+            'flavor' => "Hire them cheaply - this is our motto.",
+        },
+        'development_ticket_clay' => {
+            'id' => 235,
+            'era' => 2,
+            'type' => 'ticket_clay',
+            'duration' => 'limited',
+            'vp' => 0,
+            'cost' => {
+                'clay' => 3,
+            },
+            'title' => 'Ticket',
+            'description' => 'Each time you move a Steward or Ambassador, you may spend 2 Clay and move them to a place of your choice. (3 Uses)',
+            'flavor' => "Bon voyage!",
+
+        },
+        'development_wood_saw_4' => {
+            'id' => 301,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'planks' => 2,
+            },
+            'title' => 'Wood Saw',
+            'description' => 'Gain 2 Planks.',
+            'flavor' => "Quality isn't half of what it used to be: your new saw lasted for a couple of planks.",
+        },
+        'development_ruins_5' => {
+            'id' => 302,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'bricks' => 1,
+            },
+            'title' => 'Ruin',
+            'description' => 'Gain 2 Bricks.',
+            'flavor' => "You salvaged a brick from an old ruin.",
+        },
+        'development_cooking_hearth' => {
+            'id' => 303,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'food' => 4,
+            },
+            'title' => 'Cooking Hearth',
+            'description' => 'Gain 4 Food.',
+            'flavor' => "Bigger but not better.",
+        },
+        'development_needle_and_thread' => {
+            'id' => 304,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'cloth' => 2,
+            },
+            'title' => 'Needle and Thread',
+            'description' => 'Gain 2 Cloth.',
+            'flavor' => "My thumb's hurting.",
+        },
+        'development_blacksmiths_anvil' => {
+            'id' => 305,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'tools' => 2,
+            },
+            'title' => "Blacksmith's Anvil",
+            'description' => 'Gain 2 Tools.',
+            'flavor' => "They won't steal this one ... wishful thinking.",
+        },
+        'development_stone_pickaxe' => {
+            'id' => 306,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'ore' => 2,
+            },
+            'title' => 'Stone Pickaxe',
+            'description' => 'Gain 2 Ore.',
+            'flavor' => "Amazing - it breaks after two pieces of ore ... ",
+        },
+        'development_grill' => {
+            'id' => 307,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'coal' => 1,
+            },
+            'title' => 'Grill',
+            'description' => 'Gain 1 Coal.',
+            'flavor' => "You should have cleaned it more ... ",
+        },
+        'development_saw' => {
+            'id' => 308,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Saw',
+            'description' => 'Convert 1 Wood to 1 Plank. (No Limit)',
+            'flavor' => "Cuts like there's no tomorrow - literally.",
+        },
+        'development_saw' => {
+            'id' => 309,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'clay' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'bricks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Oven',
+            'description' => 'Convert 1 Clay to 1 Brick. (No Limit)',
+            'flavor' => '"World Champion Brick Maker"',
+        },
+        'development_tool_trader' => {
+            'id' => 310,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'bricks' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'tools' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Tool Trader',
+            'description' => 'Convert 1 Brick to 1 Tool. (No Limit)',
+            'flavor' => "Bricks for tools - sounds like a good deal!",
+        },
+        'development_charcoal_pile' => {
+            'id' => 311,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 3,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'coal' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Charcoal Pile',
+            'description' => 'Convert 3 Wood to 1 Coal. (No Limit)',
+            'flavor' => "Burns bright and hot!",
+        },
+        'development_small_ironsmelter' => {
+            'id' => 312,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'coal' => 1,
+                            'ore' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'iron' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 2,
+            'title' => 'Small Ironsmelter',
+            'description' => 'Convert 1 Coal and 1 Ore to 1 Iron. (Limit 2)',
+            'flavor' => "Literally melts away",
+        },
+        'development_large_ironsmelter' => {
+            'id' => 313,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'coal' => 1,
+                            'ore' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'iron' => 1,
+                        },
+                    },
+                },
+                {
+                    'from' => {
+                        {
+                            'wood' => 3,
+                            'ore' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'iron' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Large Ironsmelter',
+            'description' => 'Convert 1 Coal and 2 Ore or 3 Wood and 2 Ore to 1 Iron. (No Limit)',
+            'flavor' => "Bigger and lasts longer - just not long enought.",
+        },
+        'development_building_contract_stables' => {
+            'id' => 314,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 3,
+                'planks' => 3,
+                'iron' => 2,
+            },
+            'builds' => 'building_stables',
+            'limit' => 1,
+            'title' => 'Building Contract - Stables',
+            'description' => 'For 3 Tools, 3 Planks, and 2 Iron build a Stables. (Limit 1)',
+            'flavor' => "Swift like a thoroughbred",
+        },
+        'development_building_contract_boardinghouse' => {
+            'id' => 315,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 2,
+                'bricks' => 1,
+                'iron' => 1,
+            },
+            'builds' => 'building_boardinghouse',
+            'limit' => 1,
+            'title' => 'Building Contract - Boardinghouse',
+            'description' => 'For 2 Tools, 1 Brick, and 1 Iron build a Boardinghouse. (Limit 1)',
+            'flavor' => "Will the new steward be as good as the old one.",
+        },
+        'development_building_contract_customs_office' => {
+            'id' => 316,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 2,
+                'planks' => 2,
+                'bricks' => 2,
+            },
+            'builds' => 'building_customs_office',
+            'limit' => 1,
+            'title' => 'Building Contract - Customs Office',
+            'description' => 'For 2 Tools, 2 Planks, and 2 Bricks build a Customs Office. (Limit 1)',
+            'flavor' => "Money makes the world go round.",
+        },
+        'development_building_contract_house' => {
+            'id' => 317,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 2,
+                'planks' => 1,
+                'bricks' => 1,
+            },
+            'info' => {
+                'building'  => 'building_house',
+                'upgrades'  => 'building_flat',
+            },
+            'limit' => 1,
+            'title' => 'Building Contract - House',
+            'description' => 'For 2 Tools, 1 Planks, and 1 Brick upgrade a Flat to a House. (Limit 1)',
+            'flavor' => "Home sweet home",
+        },
+        'development_building_contract_hunting_grounds' => {
+            'id' => 318,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 3,
+                'wood' => 3,
+                'clay' => 1,
+            },
+            'info' => {
+                'building'  => 'building_hunting_grounds',
+                'upgrades'  => 'building_hunting_lodge',
+            },
+            'limit' => 1,
+            'title' => 'Building Contract - Hunting Grounds',
+            'description' => 'For 3 Tools, 3 Wood, and 1 Clay upgrade a Hunting Lodge to a Hunting Grounds. (Limit 1)',
+            'flavor' => "Home sweet home",
+        },
+        'development_building_contract_tailor_shop' => {
+            'id' => 319,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 3,
+                'bricks' => 2,
+                'clay' => 1,
+            },
+            'info' => {
+                'building'  => 'building_tailor_shop',
+            },
+            'limit' => 1,
+            'title' => 'Building Contract - Tailor Shop',
+            'description' => 'For 3 Tools, 1 Clay, and 2 Bricks build a Tailor Shop. (Limit 1)',
+            'flavor' => "Clothes make the man!",
+        },
+        'development_charcoal_furnace' => {
+            'id' => 320,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'game',
+            'vp' => 3,
+            'gain' => {
+            },
+            'cost' {
+                'tools' => 2,
+                'coal' => 2,
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 3,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'coal' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 1,
+            'title' => 'Charcoal Furnace',
+            'description' => 'During Production: Converts 3 Wood to 1 Coal. (Limit 1)',
+            'flavor' => "Lifetime guarantee - for real?!",
+        },
+        'development_weaving_loom' => {
+            'id' => 321,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 3,
+                'clay' => 1,
+                'planks' => 3,
+                'cloth' => 1,
+            },
+            'production' => {
+                'cloth' => 1,
+            },
+            'title' => 'Weaving Loom',
+            'description' => 'Gain +1 Cloth during Production.',
+            'flavor' => "Favorite tool of the valiant little tailor.",
+        },
+        'development_pad_saw' => {
+            'id' => 322,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 3,
+                'wood' => 4,
+            },
+            'production' => {
+                'wood' => 2,
+            },
+            'title' => 'Pad Saw',
+            'description' => 'Gain +1 Wood during Production.',
+            'flavor' => "Almost like two beavers on speed.",
+        },
+        'development_clay_hollow' => {
+            'id' => 323,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 3,
+                'clay' => 4,
+            },
+            'production' => {
+                'clay' => 2,
+            },
+            'title' => 'Clay Hollow',
+            'description' => 'Gain +2 Clay during Production.',
+            'flavor' => "Image for a moment, you'd also have a durable shovel ...",
+        },
+        'development_butchery' => {
+            'id' => 324,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 4,
+            'cost' => {
+                'tools' => 3,
+                'planks' => 2,
+                'bricks' => 2,
+            },
+            'production' => {
+                'tools' => 1,
+                'food' => 1,
+            },
+            'title' => 'Butchery',
+            'description' => 'Gain +1 Tool and +1 Food during Production.',
+            'flavor' => "Yummy steak!",
+        },
+        'development_construction_site' => {
+            'id' => 325,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'construction_site',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'planks' => 2,
+                'bricks' => 2,
+            },
+            'title' => 'Construction Site',
+            'description' => 'This is an additional building spot (not for storage facilities.)',
+            'flavor' => "A nice place to build something amazing!",
+        },
+        'development_assembly_hall' => {
+            'id' => 326,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'assembly_hall',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'wood' => 3,
+                'clay' => 3,
+            },
+            'title' => 'Assembly Hall',
+            'description' => 'You may build on two Borderland spots (without needing the Community Hall).',
+            'flavor' => "Strong contacts",
+        },
+        'development_steam_engine' => {
+            'id' => 327,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'steam_engine',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 2,
+                'clay' => 3,
+                'ore' => 3,
+            },
+            'title' => 'Steam Engine',
+            'description' => 'Exactly one Factory may be operated by both 1 Farmer and 1 Citizen.',
+            'flavor' => "So complicated ... better let two people operate it!",
+        },
+        'development_storage_room' => {
+            'id' => 328,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 1,
+                'bricks' => 1,
+            },
+            'storage' => {
+                'storage' => {
+                    'type' => '',
+                    'count' => 2,
+                },
+            }
+            'title' => 'Storage Room',
+            'description' => 'Gain +2 Storage.',
+            'flavor' => "One can never have enough storage capacity!",
+        },
+        'development_storage_room_2' => {
+            'id' => 329,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 1,
+                'bricks' => 1,
+            },
+            'storage' => {
+                'storage' => {
+                    'type' => '',
+                    'count' => 2,
+                },
+            }
+            'title' => 'Storage Room',
+            'description' => 'Gain +2 Storage.',
+            'flavor' => "One can never have enough storage capacity!",
+        },
+        'development_holiday_house_1' => {
+            'id' => 330,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 4,
+            'cost' => {
+                'tools' => 3,
+                'planks' => 3,
+                'bricks' => 2,
+            },
+            'workers' => {
+                'merchant' => 1,
+            },
+            'title' => 'Holiday House',
+            'description' => 'Gain +1 Merchant.',
+            'flavor' => "Big and well-lit ... exactly what I need.",
+        },
+        'development_holiday_house_2' => {
+            'id' => 331,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'residence',
+            'duration' => 'game',
+            'vp' => 4,
+            'cost' => {
+                'tools' => 3,
+                'planks' => 3,
+                'bricks' => 2,
+            },
+            'workers' => {
+                'merchant' => 1,
+            },
+            'title' => 'Holiday House',
+            'description' => 'Gain +1 Merchant.',
+            'flavor' => "Big and well-lit ... exactly what I need.",
+        },
+        'development_depot' => {
+            'id' => 332,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 1,
+                'bricks' => 1,
+            },
+            'storage' => {
+                'warehouse' => {
+                    'type' => '',
+                    'count' => 2,
+                },
+            }
+            'title' => 'Depot',
+            'description' => 'Gain +2 Warehouse.',
+            'flavor' => "Isn't that much more space, is it?",
+        },
+        'development_realtors_license' => {
+            'id' => 333,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'realtors_license',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 4,
+            },
+            'title' => "Realtor's License",
+            'description' => 'Whenever you build at least one Citizen building (including the Factory) at a Builder, you may also build Flats for 1 Tool and 1 Plank each. You must build these Flats without remodeling Farms!',
+            'flavor' => "Juicy commission!",
+        },
+        'development_horse' => {
+            'id' => 334,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'horse',
+            'duration' => 'limited',
+            'vp' => 0,
+            'cost' => {
+                'tools' => 1,
+                'planks' => 1,
+                'ore' => 1,
+            },
+            'title' => "Horse",
+            'description' => "Gain 2 Gold. Once per turn, you may increase your Steward's range by 1 for that turn. (2 Uses)",
+            'flavor' => "You wish you had looked this gift horse in the mouth better ... ",
+        },
+        'development_ticket_planks' => {
+            'id' => 335,
+            'era' => 3,
+            'count' => 1,
+            'type' => 'ticket_planks',
+            'duration' => 'limited',
+            'cost' => {
+                'planks' => 3,
+            },
+            'title' => 'Ticket',
+            'description' => 'Each time you move a Steward or Ambassador, you may pay an additional 1 Plank to move the them to a place of your choice.',
+            'flavor' => "Buen viaje!",
+        },
+        'development_wood_saw_5' => {
+            'id' => 401,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'planks' => 2,
+            },
+            'title' => 'Wood Saw',
+            'description' => 'Gain 2 Planks.',
+            'flavor' => "Quality isn't half of what it used to be: your new saw lasted for a couple of planks.",
+        },
+        'development_ruin_6' => {
+            'id' => 402,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'bricks' => 1,
+            },
+            'title' => 'Ruin',
+            'description' => 'Gain 1 Brick.',
+            'flavor' => "You salvaged a brick from an old ruin.",
+        },
+        'development_embroidery_machine' => {
+            'id' => 403,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'cloth' => 4,
+            },
+            'title' => 'Embroidery Machine',
+            'description' => 'Gain 4 Cloth.',
+            'flavor' => "Tuck, tuck, tuck, tuck, tuck, tuck ... bang!",
+        },
+        'development_anvil_4' => {
+            'id' => 404,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'tools' => 2,
+            },
+            'title' => "Blacksmith's Anvil",
+            'description' => 'Gain 2 Tools.',
+            'flavor' => "They won't steal this one ... wishful thinking.",
+        },
+        'development_stone_pickaxe_2' => {
+            'id' => 405,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'ore' => 2,
+            },
+            'title' => "Stone Pickaxe",
+            'description' => 'Gain 2 Ore.',
+            'flavor' => "Amazing - it breaks after two pieces of ore ... ",
+        },
+        'development_grill_2' => {
+            'id' => 406,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'coal' => 1,
+            },
+            'title' => 'Grill',
+            'description' => 'Gain 1 Coal.',
+            'flavor' => "You should have cleaned it more ... ",
+        },
+        'development_grill_3' => {
+            'id' => 407,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'gain',
+            'duration' => 'instant',
+            'gain' => {
+                'coal' => 1,
+            },
+            'title' => 'Grill',
+            'description' => 'Gain 1 Coal.',
+            'flavor' => "You should have cleaned it more ... ",
+        },
+        'development_saw_2' => {
+            'id' => 408,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'planks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Saw',
+            'description' => 'Convert 1 Wood to 1 Plank. (No Limit)',
+            'flavor' => "Cuts like there's no tomorrow - literally.",
+        },
+        'development_oven' => {
+            'id' => 409,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'clay' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'bricks' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Oven',
+            'description' => 'Convert 1 Clay to 1 Brick. (No Limit)',
+            'flavor' => "World Champion Brick Maker.",
+        },
+        'development_tool_trader_2' => {
+            'id' => 410,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'coal' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'tools' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Tool Trader',
+            'description' => 'Convert 1 Coal to 1 Tool. (No Limit)',
+            'flavor' => "Coal for tools - sounds like a good deal!",
+        },
+        'development_charcoal_kiln' => {
+            'id' => 411,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'wood' => 2,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'coal' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => 3,
+            'title' => 'Charcoal Kiln',
+            'description' => 'Convert 2 Wood to 1 Coal. (Limit 3)',
+            'flavor' => "And it burns, burns, burns ... ",
+        },
+        'development_ironsmelter' => {
+            'id' => 412,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'convert',
+            'duration' => 'instant',
+            'gain' => {
+            },
+            'converts' => [
+                {
+                    'from' => {
+                        {
+                            'coal' => 1,
+                            'ore' => 1,
+                        },
+                    },
+                    'to' => {
+                        {
+                            'iron' => 1,
+                        },
+                    },
+                },
+            ],
+            'limit' => -1,
+            'title' => 'Ironsmelter',
+            'description' => 'Convert 1 Coal and 1 Ore to 1 Iron. (No Limit)',
+            'flavor' => "Melts everything - including itself.",
+        },
+        'development_building_contract_textile_mill' => {
+            'id' => 413,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 3,
+                'planks' => 2,
+                'wood' => 2,
+                'iron' => 1,
+            },
+            'info' => {
+                'building'  => 'building_textile_mill',
+                'upgrades'  => 'building_tailor_shop',
+            },
+            'limit' => 1,
+            'title' => 'Building Contract - Textile Mill',
+            'description' => 'For 3 Tools, 2 Planks, 2 Wood, and 1 Iron upgrade a Tailor Shop to a Textile Mill. (Limit 1)',
+            'flavor' => "More clothes for the ladies!",
+        },
+        'development_building_contract_storage_hall' => {
+            'id' => 414,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'contract',
+            'duration' => 'instant',
+            'cost' {
+                'tools' => 3,
+                'bricks' => 1,
+                'iron' => 1,
+            },
+            'info' => {
+                'building'  => 'building_storage_hall',
+                'upgrades'  => 'building_storage_house',
+            },
+            'limit' => 1,
+            'title' => 'Building Contract - Storage Hall',
+            'description' => 'For 3 Tools, 1 Brick, and 1 Iron upgrade a Storage House to a Storage Hall. (Limit 1)',
+            'flavor' => "I've got so much space! Only you don't ... ",
+        },
+        'development_market_stand' => {
+            'id' => 415,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'market_stand',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 1,
+                'bricks' => 1,
+            },
+            'title' => "Market Stand",
+            'description' => "Alternative Market Action: Trade 4 goods for 1 Tool. (No Limit)",
+            'flavor' => "Exorbitant price - but as long as there's someone who pays it ... ",
+        },
+        'development_delivery_contract_wood' => {
+            'id' => 416,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'delivery_contract_wood',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 3,
+                'wood' => 3,
+            },
+            'title' => "Delivery Contract - Wood",
+            'description' => "You may pay wood from buffers.",
+            'flavor' => "Finally, no more back and forth!",
+        },
+        'development_delivery_contract_clay' => {
+            'id' => 417,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'delivery_contract_clay',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 3,
+                'clay' => 3,
+            },
+            'title' => "Delivery Contract - Clay",
+            'description' => "You may pay clay from buffers.",
+            'flavor' => "Finally, no more back and forth!",
+        },
+        'development_delivery_contract_ore' => {
+            'id' => 418,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'delivery_contract_ore',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 3,
+                'ore' => 3,
+            },
+            'title' => "Delivery Contract - Ore",
+            'description' => "You may pay ore from buffers.",
+            'flavor' => "Finally, no more back and forth!",
+        },
+        'development_iron_ore_mine' => {
+            'id' => 419,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 6,
+            'cost' => {
+                'tools' => 3,
+                'bricks' => 2,
+                'planks' => 2,
+                'ore' => 4,
+            },
+            'production' => {
+                'ore' => 2,
+            },
+            'title' => 'Iron Ore Mine',
+            'description' => 'Gain +2 Ore during Production.',
+            'flavor' => "Provides tons of ore as if by magic.",
+        },
+        'development_greenhouse' => {
+            'id' => 420,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 5,
+            'cost' => {
+                'tools' => 2,
+                'iron' => 1,
+            },
+            'production' => {
+                'food' => 4,
+            },
+            'title' => 'Greenhouse',
+            'description' => 'Gain +4 Food during Production.',
+            'flavor' => "Vegan's delight",
+        },
+        'development_weaving_machine' => {
+            'id' => 421,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 6,
+            'cost' => {
+                'tools' => 3,
+                'wood' => 4,
+                'iron' => 1,
+            },
+            'production' => {
+                'cloth' => 2,
+            },
+            'title' => 'Weaving Machine',
+            'description' => 'Gain +2 Cloth during Production.',
+            'flavor' => "Puts those old weaving looms in the shade.",
+        },
+        'development_village_church' => {
+            'id' => 422,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 2,
+                'bricks' => 1,
+            },
+            'production' => {
+                'gold' => 2,
+            },
+            'title' => 'Village Church',
+            'description' => 'Gain +2 Gold during Production.',
+            'flavor' => "Deposit on your account in heaven ... ",
+        },
+        'development_iron_axes' => {
+            'id' => 423,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce_bonus',
+            'duration' => 'game',
+            'vp' => 5,
+            'cost' => {
+                'wood' => 2,
+                'iron' => 1,
+            },
+            'building_bonus' => {
+                'building' => 'building_foresters_house',
+                'wood' => 1,
+            },
+            'title' => 'Iron Axes',
+            'description' => "Forester's Houses gain +1 Wood during Production.",
+            'flavor' => "Chop, chop!",
+        },
+        'development_iron_axes_2' => {
+            'id' => 424,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce_bonus',
+            'duration' => 'game',
+            'vp' => 5,
+            'cost' => {
+                'wood' => 2,
+                'iron' => 1,
+            },
+            'building_bonus' => {
+                'building' => 'building_foresters_house',
+                'wood' => 1,
+            },
+            'title' => 'Iron Axes',
+            'description' => "Forester's Houses gain +1 Wood during Production.",
+            'flavor' => "Chop, chop!",
+        },
+        'development_iron_shovels' => {
+            'id' => 425,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce_bonus',
+            'duration' => 'game',
+            'vp' => 5,
+            'cost' => {
+                'clay' => 2,
+                'iron' => 1,
+            },
+            'building_bonus' => {
+                'building' => 'building_hollow',
+                'clay' => 1,
+            },
+            'title' => 'Iron Shovels',
+            'description' => "Hollows gain +1 Clay during Production.",
+            'flavor' => "These will last forever - we're really sure.",
+        },
+        'development_iron_shovels_2' => {
+            'id' => 426,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce_bonus',
+            'duration' => 'game',
+            'vp' => 5,
+            'cost' => {
+                'clay' => 2,
+                'iron' => 1,
+            },
+            'building_bonus' => {
+                'building' => 'building_hollow',
+                'clay' => 1,
+            },
+            'title' => 'Iron Shovels',
+            'description' => "Hollows gain +1 Clay during Production.",
+            'flavor' => "These will last forever - we're really sure.",
+        },
+        'development_sewing_machines' => {
+            'id' => 427,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce_bonus',
+            'duration' => 'game',
+            'vp' => 8,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 3,
+                'bricks' => 2,
+                'iron' => 1,
+            },
+            'building_bonus' => {
+                'building' => 'building_tailor_shop',
+                'cloth' => 1,
+            },
+            'title' => 'Sewing Machines',
+            'description' => "Tailor Shops gain +1 Cloth during Production.",
+            'flavor' => "Time for some modernization!",
+        },
+        'development_weaving_mill' => {
+            'id' => 428,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'produce_bonus',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 3,
+                'clay' => 2,
+            },
+            'building_bonus' => {
+                'building' => 'building_tailor_shop',
+                'cloth' => 2,
+                'limit' => 1,
+            },
+            'title' => 'Weaving Mill',
+            'description' => "One Tailor Shop gain +2 Cloth during Production.",
+            'flavor' => "The clothing business is booming: time for an expansion!",
+        },
+        'development_construction_site_2' => {
+            'id' => 429,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'construction_site',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'planks' => 2,
+                'bricks' => 2,
+            },
+            'title' => 'Construction Site',
+            'description' => 'This is an additional building spot (not for storage facilities.)',
+            'flavor' => "A nice place to build something amazing!",
+        },
+        'development_storage_cellar' => {
+            'id' => 430,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 2,
+                'bricks' => 2,
+            },
+            'storage' => {
+                'storage' => {
+                    'type' => '',
+                    'count' => 3,
+                },
+            }
+            'title' => 'Storage Cellar',
+            'description' => 'Gain +3 Storage.',
+            'flavor' => "If only there was more space!",
+        },
+        'development_storage_cellar_2' => {
+            'id' => 431,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 3,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 2,
+                'bricks' => 2,
+            },
+            'storage' => {
+                'storage' => {
+                    'type' => '',
+                    'count' => 3,
+                },
+            }
+            'title' => 'Storage Cellar',
+            'description' => 'Gain +3 Storage.',
+            'flavor' => "If only there was more space!",
+        },
+        'development_depot_2' => {
+            'id' => 432,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 1,
+                'bricks' => 1,
+            },
+            'storage' => {
+                'warehouse' => {
+                    'type' => '',
+                    'count' => 2,
+                },
+            }
+            'title' => 'Depot',
+            'description' => 'Gain +2 Warehouse.',
+            'flavor' => "Isn't that much more space, is it?",
+        },
+        'development_robe_warehouse' => {
+            'id' => 433,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'storage',
+            'duration' => 'game',
+            'vp' => 2,
+            'cost' => {
+                'tools' => 1,
+                'cloth' => 1,
+            },
+            'storage' => {
+                'warehouse' => {
+                    'type' => 'cloth',
+                    'count' => 2,
+                },
+            }
+            'title' => 'Robe Warehouse',
+            'description' => 'Gain +2 Warehouse for Cloth.',
+            'flavor' => "Where to put those rags?",
+        },
+        'development_employment_office' => {
+            'id' => 434,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'employement_office',
+            'duration' => 'game',
+            'vp' => 0,
+            'cost' => {
+                'tools' => 2,
+                'planks' => 3,
+                'bricks' => 3,
+            },
+            'title' => 'Employment Office',
+            'description' => 'At Game End: Receive +2 Gold for each unemployed Citizen (Max 8)',
+            'flavor' => "Budget cuts: four applications only!",
+        },
+        'development_ticket_bricks' => {
+            'id' => 435,
+            'era' => 4,
+            'count' => 1,
+            'type' => 'ticket_bricks',
+            'duration' => 'count',
+            'cost' => {
+                'wood' => 3,
+            },
+            'title' => 'Ticket',
+            'description' => 'Each time you move a Steward or Ambassador, you may pay an additional 2 Bricks to move the them to a place of your choice.',
+            'flavor' => "Milej podrozy!",
+        },
+
+
 
 
 

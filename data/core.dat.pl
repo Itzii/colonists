@@ -2043,6 +2043,9 @@ $VAR1 = {
             }
             'type' => 'convert',
             'info' => {
+                'gain' => {
+                    'tools' => 1,
+                }
                 'tools' => 1,
             }
         },
@@ -2094,25 +2097,13 @@ $VAR1 = {
             'flavor' => "You thought it'd be a good idea to burn some bricks in your clay oven: wrong.",
             'duration' => 'instant',
             'limit' => 2,
+            'cost' => {
+                'wood' => 1,
+                'clay' => 1,
+            },
             'type' => 'convert',
             'info' => {
-                'gain' => {
-                },
-                'converts' => [
-                    {
-                        'from' => {
-                            {
-                                'wood' => 1,
-                                'clay' => 1,
-                            },
-                        },
-                        'to' => {
-                            {
-                                'bricks' => 1,
-                            },
-                        },
-                    },
-                ],
+                'bricks' => 1,
             },
         },
         'development_building_contract_farm' => {
@@ -2121,11 +2112,11 @@ $VAR1 = {
             'flavor' => "Two are better than one.",
             'duration' => 'instant',
             'limit' => 2,
+            'cost' {
+                'wood' => 1,
+            },
             'type' => 'contract',
             'info' => {
-                'cost' {
-                    'wood' => 1,
-                },
                 'builds' => 'building_farm',
             },
 
@@ -2136,13 +2127,13 @@ $VAR1 = {
             'flavor' => "Longer, wider, higher!",
             'duration' => 'instant',
             'limit' => 1,
+            'cost' {
+                'tools' => 1,
+                'wood' => 2,
+                'bricks' => 1,
+            },
             'type' => 'contract',
             'info' => {
-                'cost' {
-                    'tools' => 1,
-                    'wood' => 2,
-                    'bricks' => 1,
-                },
                 'builds' => 'building_estate',
                 'upgrade_building' => 'building_farm',
             },
@@ -2153,12 +2144,12 @@ $VAR1 = {
             'flavor' => "As cheaps as they can get ... ",
             'duration' => 'instant',
             'limit' => 1,
+            'cost' {
+                'tools' => 1,
+                'wood' => 2,
+            },
             'type' => 'contract',
             'info' => {
-                'cost' {
-                    'tools' => 1,
-                    'wood' => 2,
-                },
                 'builds' => 'building_flat',
                 'upgrade_building' => 'building_farm',
             },
@@ -2170,12 +2161,12 @@ $VAR1 = {
             'flavor' => "You know what's good? More wood!",
             'duration' => 'instant',
             'limit' => 1,
+            'cost' {
+                'tools' => 2,
+                'wood' => 2,
+            },
             'type' => 'contract',
             'info' => {
-                'cost' {
-                    'tools' => 2,
-                    'wood' => 2,
-                },
                 'builds' => 'building_foresters_house',
             },
         },
@@ -2185,12 +2176,12 @@ $VAR1 = {
             'flavor' => "I won't say nay to more clay.",
             'duration' => 'instant',
             'limit' => 1,
+            'cost' {
+                'tools' => 2,
+                'clay' => 2,
+            },
             'type' => 'contract',
             'info' => {
-                'cost' {
-                    'tools' => 2,
-                    'clay' => 2,
-                },
                 'builds' => 'building_hollow',
             },
         },
@@ -2200,13 +2191,13 @@ $VAR1 = {
             'flavor' => "Improve your aim and hunt some game!",
             'duration' => 'instant',
             'limit' => 1,
+            'cost' {
+                'tools' => 2,
+                'wood' => 2,
+                'clay' => 1,
+            },
             'type' => 'contract',
             'info' => {
-                'cost' {
-                    'tools' => 2,
-                    'wood' => 2,
-                    'clay' => 1,
-                },
                 'builds' => 'building_hunting_lodge',
             },
         },
@@ -2216,12 +2207,12 @@ $VAR1 = {
             'flavor' => "Every lad needs a shed!",
             'duration' => 'instant',
             'limit' => 2,
+            'cost' {
+                'tools' => 1,
+                'wood' => 1,
+            },
             'type' => 'contract',
             'info' => {
-                'cost' {
-                    'tools' => 1,
-                    'wood' => 1,
-                },
                 'builds' => 'building_storage_shed',
             },
         },
@@ -2252,199 +2243,175 @@ $VAR1 = {
             },
             'type' => 'special_pass',
         },
-
-
-
         'development_axe' => {
-            'id' => 123,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'bonus',
+            'title' => 'Axe',
+            'description' => 'Gain +1 Wood whenever you get wood from a place.',
+            'flavor' => "This axe appears to last for ages.",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 1,
             'cost' => {
                 'wood' => 3,
             },
-            'bonus' => {
+            'type' => 'bonus',
+            'info' => {
                 'wood' => 1,
             },
-            'title' => 'Axe',
-            'description' => 'Gain +1 Wood whenever you get wood from a place.',
-            'flavor' => "This axe appears to last for ages.",
         },
         'development_spade' => {
-            'id' => 124,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'bonus',
+            'title' => 'Spade',
+            'description' => 'Gain +1 Clay whenever you get clay from a place.',
+            'flavor' => "Lo and behold: a spade that doesn't break immediately.",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 1,
             'cost' => {
                 'clay' => 3,
             },
-            'bonus' => {
+            'type' => 'bonus',
+            'info' => {
                 'clay' => 1,
             },
-            'title' => 'Spade',
-            'description' => 'Gain +1 Clay whenever you get clay from a place.',
-            'flavor' => "Lo and behold: a spade that doesn't break immediately.",
         },
         'development_vegetable_garden' => {
-            'id' => 125,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'produce',
+            'title' => 'Vegetable Garden',
+            'description' => 'Gain +1 Food during Production.',
+            'flavor' => "Are you ready for a vegan diet?",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 2,
             'cost' => {
                 'tools' => 2,
                 'clay' => 1,
                 'planks' => 1,
             },
-            'production' => {
+            'type' => 'produce',
+            'info' => {
                 'food' => 1,
             },
-            'title' => 'Vegetable Garden',
-            'description' => 'Gain +1 Food during Production.',
-            'flavor' => "Are you ready for a vegan diet?",
         },
         'development_beavers_lodge' => {
-            'id' => 126,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'produce',
+            'title' => "Beaver's Lodge",
+            'description' => 'Gain +1 Wood during Production.',
+            'flavor' => "The beaver is gnawed impressed.",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 1,
             'cost' => {
                 'tools' => 1,
                 'wood' => 2,
             },
-            'production' => {
+            'type' => 'produce',
+            'info' => {
                 'wood' => 1,
             },
-            'title' => "Beaver's Lodge",
-            'description' => 'Gain +1 Wood during Production.',
-            'flavor' => "The beaver is gnawed impressed.",
         },
         'development_loam_hollow' => {
-            'id' => 127,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'produce',
+            'title' => 'Loam Hollow',
+            'description' => 'Gain +1 Clay during Production.',
+            'flavor' => "Clay for days!",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 2,
             'cost' => {
                 'tools' => 2,
                 'clay' => 2,
             },
-            'production' => {
+            'type' => 'produce',
+            'info' => {
                 'clay' => 1,
             },
-            'title' => 'Loam Hollow',
-            'description' => 'Gain +1 Clay during Production.',
-            'flavor' => "Clay for days!",
         },
         'development_holiday_cabin' => {
-            'id' => 128,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'residence',
+            'title' => 'Holiday Cabin',
+            'description' => 'Gain +1 Farmer.',
+            'flavor' => "Small, but perfectly formed.",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 1,
             'cost' => {
                 'tools' => 1,
                 'wood' => 1,
             },
-            'workers' => {
+            'type' => 'residence',
+            'info' => {
                 'farmer' => 1,
             },
-            'title' => 'Holiday Cabin',
-            'description' => 'Gain +1 Farmer.',
-            'flavor' => "Small, but perfectly formed.",
         },
         'development_holiday_flat' => {
-            'id' => 130,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'residence',
+            'title' => 'Holiday Flat',
+            'description' => 'Gain +1 Citizen.',
+            'flavor' => "How does a permanent vacation sound?",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 2,
             'cost' => {
                 'tools' => 1,
                 'wood' => 1,
                 'planks' => 1,
             },
-            'workers' => {
+            'type' => 'residence',
+            'info' => {
                 'citizen' => 1,
             },
-            'title' => 'Holiday Flat',
-            'description' => 'Gain +1 Citizen.',
-            'flavor' => "How does a permanent vacation sound?",
         },
         'development_storehouse' => {
-            'id' => 132,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'storage',
+            'title' => 'Storehouse',
+            'description' => 'Gain +1 Warehouse.',
+            'flavor' => "This must be the world's smallest warehouse. Still better than nothing.",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 2,
             'cost' => {
                 'tools' => 1,
                 'planks' => 1,
             },
-            'storage' => {
+            'type' => 'storage',
+            'info' => {
                 'warehouse' => {
                     'type' => '',
                     'count' => 1,
                 },
-            }
-            'title' => 'Storehouse',
-            'description' => 'Gain +1 Warehouse.',
-            'flavor' => "This must be the world's smallest warehouse. Still better than nothing.",
+            },
         },
         'development_training' => {
-            'id' => 133,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'special',
+            'title' => 'Training',
+            'description' => 'Draw +1 Development Card at the Librarian.',
+            'flavor' => "Education never hurts: surely you'll have some great ideas now.",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 2,
             'cost' => {
                 'wood' => 2,
                 'planks' => 1,
             },
-            'special' => 'special_training',
-            'title' => 'Training',
-            'description' => 'Draw +1 Development Card at the Librarian.',
-            'flavor' => "Education never hurts: surely you'll have some great ideas now.",
+            'type' => 'training',
         },
         'development_deed_registration' => {
-            'id' => 134,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'deed_registration',
+            'title' => 'Deed Registration',
+            'description' => 'Whenever you build at least one farmer building (including the Factory) at a Builder, you may also build Farms for 1 Tool and 1 Wood each.',
+            'flavor' => "Yo dawg, I heard you like farms ... ",
             'duration' => 'game',
+            'limit' => -1,
             'vp' => 1,
             'cost' => {
                 'tools' => 1,
                 'wood' => 4,
             },
-            'title' => 'Deed Registration',
-            'description' => 'Whenever you build at least one farmer building (including the Factory) at a Builder, you may also build Farms for 1 Tool and 1 Wood each.',
-            'flavor' => "Yo dawg, I heard you like farms ... ",
+            'type' => 'deed_registration',
         },
         'development_ticket_wood' => {
-            'id' => 135,
-            'era' => 1,
-            'count' => 1,
-            'type' => 'ticket_wood',
+            'title' => 'Ticket',
+            'description' => 'Each time you move a Steward or Ambassador, you may pay an additional 2 Wood to move the them to a place of your choice.',
+            'flavor' => "Have a nice trip!",
             'duration' => 'count',
             'cost' => {
                 'wood' => 3,
             },
-            'title' => 'Ticket',
-            'description' => 'Each time you move a Steward or Ambassador, you may pay an additional 2 Wood to move the them to a place of your choice.',
-            'flavor' => "Have a nice trip!",
+            'type' => 'ticket_wood',
+            'info' => {
+                'count' => 3,
+            }
         },
 
 
